@@ -8,6 +8,7 @@ import Loading from "../components/loading";
 import Navigation from "../components/navigation";
 import { tabs } from "../constants/constants";
 import Spacer from "../components/spacer";
+import Footer from "../components/footer/footer";
 
 const AppRoutes = () => {
     const { user, theme } = useContext(Context);
@@ -31,6 +32,7 @@ const AppRoutes = () => {
                             })}
                         </Routes>
                 }
+                <Footer/>
 
             </div>
         </div>
