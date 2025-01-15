@@ -3,8 +3,9 @@ import { BrowserRouter } from "react-router-dom";
 import AppRoutes from "../routes/routes";
 
 const Provider = () => {
+    // Passes Context to Application Routes
+
     return (
-        // Passes Context to Application Routes
         <ContextProvider>
                 <BrowserRouter>
                     <AppRoutes></AppRoutes>
