@@ -15,9 +15,9 @@ const AppRoutes = () => {
     const [loading, setLoading] = useState(false)
     return (
         <div style={{ backgroundColor: theme.background }}>
+            <Navigation tabs={tabs}>
+            </Navigation>
             <div className="mx-auto max-w-[1280px] p-4 min-h-[100vh]" >
-                <Navigation tabs={tabs}>
-                </Navigation>
                 <Spacer height="20px"></Spacer>
                 {
                     loading ?
@@ -32,9 +32,9 @@ const AppRoutes = () => {
                             })}
                         </Routes>
                 }
-                <Footer/>
-
             </div>
+            <Footer/>
+
         </div>
     )
 }

@@ -1,3 +1,4 @@
+import { FaFacebook, FaInstagram, FaTiktok, FaYoutube } from "react-icons/fa";
 import About from "../routes/agnostic/about";
 import Home from "../routes/agnostic/home/home";
 
@@ -13,6 +14,7 @@ export const tabs = [
         component: <About></About>
     }
 ]
+
 
 export const art = [
     {
@@ -73,6 +75,32 @@ export const themes = [
         name: "Default",
         background: "#FFFFFF",
         text: "#000000",
-        bordercolor: "#e6e9eb"
+        bordercolor: "#ECF0F9",
+        colors: {
+            color_main: "#FFFFFF",
+            color_secondary: "#FDF4DD",
+            color_ternary: "#FDF4DD",
+            hyperlink: "#478865"
+        }
     }
 ];
+
+
+export const Socials = [
+    {
+        name: "https://instagram.com/",
+        icon: <FaInstagram color={themes[0].text} size={24}></FaInstagram>
+    },
+    {
+        name: "https://facebook.com/",
+        icon: <FaFacebook color={themes[0].text} size={24}></FaFacebook>
+    },
+    {
+        name: "https://youtube.com/",
+        icon: <FaYoutube color={themes[0].text} size={24}></FaYoutube>
+    },
+    {
+        name: "https://tiktok.com/",
+        icon: <FaTiktok color={themes[0].text} size={24}></FaTiktok>
+    }
+]

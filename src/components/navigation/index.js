@@ -3,12 +3,14 @@ import { useContext, useState } from 'react'
 import Text from "../text";
 import { Context } from "../../lib/context_provider";
 import { IoMenu } from "react-icons/io5";
+import AlertStatement from "../alertStatement";
 const Navigation = ({ tabs }) => {
     const { theme } = useContext(Context);
     const [active, setActive] = useState(false);
     return (
         <div style={{ borderColor: theme.bordercolor }} className={``}>
-            <div className={`flex justify-between`}>
+            <AlertStatement theme={theme}></AlertStatement>
+            <div className={`flex justify-between mx-auto max-w-[1280px]`}>
                 <div className="block md:flex gap-4 items-center">
                     <div>
                         <Text level={3} text={"Sahil Sian"}></Text>
