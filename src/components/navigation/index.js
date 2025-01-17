@@ -10,7 +10,7 @@ const Navigation = ({ tabs, label="Our Activities" }) => {
     const { theme } = useContext(Context);
     const [active, setActive] = useState(false);
     return (
-        <div style={{ borderColor: theme.bordercolor, border: "0.5px solid", backgroundColor: theme.background}} className={`fixed top-0 h-[200px] overflow-hidden flex flex-col w-full`}>
+        <div style={{ borderColor: theme.bordercolor, border: "0.5px solid", backgroundColor: theme.background}} className={`fixed top-0 h-[200px] overflow-hidden flex flex-col w-full z-50`}>
             <AlertStatement theme={theme}></AlertStatement>
             <div className={`flex justify-between mx-auto w-full h-full max-w-[1280px] px-4`}>
                 <div className="block md:flex gap-4 items-center">

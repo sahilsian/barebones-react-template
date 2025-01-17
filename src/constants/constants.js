@@ -79,7 +79,7 @@ export const themes = [
         colors: {
             color_main: "#FFFFFF",
             color_secondary: "#FDF4DD",
-            color_ternary: "#FDF4DD",
+            color_ternary: "#6eb2b5",
             hyperlink: "#478865"
         }
     }
@@ -102,5 +102,23 @@ export const Socials = [
     {
         name: "https://tiktok.com/",
         icon: <FaTiktok color={themes[0].text} size={24}></FaTiktok>
+    }
+]
+
+export const Activities = [
+    {
+        heading: "Arcade",
+        subheading: "Arcade Text Here",
+        img: "https://placehold.co/600x400/EEE/31343C"
+    },
+    {
+        heading: "Arcade",
+        subheading: "Arcade Text Here",
+        img: "https://placehold.co/600x400/EEE/31343C"
+    },
+    {
+        heading: "Arcade",
+        subheading: "Arcade Text Here",
+        img: "https://placehold.co/600x400/EEE/31343C"
     }
 ]

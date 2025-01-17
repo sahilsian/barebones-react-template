@@ -7,12 +7,14 @@ import FourCol from "../../../components/fourCol";
 import { art } from "../../../constants/constants";
 import { ProductUI } from "../../../constants/constants";
 import Hero from "../../../components/hero";
+import ActivityBar from "../../../components/activityBar";
 const Home = () => {
     return (
         <div>
             <Spacer height="820px"></Spacer>
             <Hero></Hero>
             <div className=" bg-[#FFF]">
+                <ActivityBar></ActivityBar>
                 <Image rounded src={Headshot}></Image>
                 <Spacer height="10px"></Spacer>
                 <Text level={"1"} text={"Hi, I'm Sahil."}></Text>
