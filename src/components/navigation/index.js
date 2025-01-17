@@ -4,17 +4,21 @@ import Text from "../text";
 import { Context } from "../../lib/context_provider";
 import { IoMenu } from "react-icons/io5";
 import AlertStatement from "../alertStatement";
-const Navigation = ({ tabs }) => {
+import NavigationIdentity from "../navigationIdentity";
+import Button from "../button";
+const Navigation = ({ tabs, label="Our Activities" }) => {
     const { theme } = useContext(Context);
     const [active, setActive] = useState(false);
     return (
-        <div style={{ borderColor: theme.bordercolor }} className={``}>
+        <div style={{ borderColor: theme.bordercolor, border: "0.5px solid" }} className={``}>
             <AlertStatement theme={theme}></AlertStatement>
-            <div className={`flex justify-between mx-auto max-w-[1280px]`}>
+            <div className={`flex justify-between mx-auto max-w-[1280px] py-6 p-4`}>
                 <div className="block md:flex gap-4 items-center">
                     <div>
-                        <Text level={3} text={"Sahil Sian"}></Text>
+                        <NavigationIdentity></NavigationIdentity>
                     </div>
+                </div>
+                <div className="md:flex items-center gap-4">
                     {tabs.map((tab) => {
                         return (
 
@@ -23,6 +27,7 @@ const Navigation = ({ tabs }) => {
                             </div>
                         )
                     })}
+                    <Button label={label}></Button>
                 </div>
 
 

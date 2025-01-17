@@ -5,10 +5,10 @@ const Button = ({status = "primary", disabled, label = "button", onClick=()=>{},
         "success": "bg-[#58BF8E] hover:bg-[#58BF8E90]",
         "warning": "bg-[#CCB32F] hover:bg-[#CCB32F90]",
         "danger": "bg-[#CC382F] hover:bg-[#CC382F90] text-white",
-        "disabled": "bg-[#C5C5C5] "
+        "disabled": "bg-[#C5C5C5]"
     }
     return (
-        <div onClick={disabled === false ? onClick : null} className={`${statusMap[status]} text-center transition-all ${disabled === true ? "cursor-auto" : "cursor-pointer"} font-semibold p-4 rounded-sm w-full ${widthFull ? "w-full" : "max-w-[400px]"} `}>
+        <div onClick={disabled === false ? onClick : null} className={`${statusMap[status]} text-center transition-all ${disabled === true ? "cursor-auto" : "cursor-pointer"} font-semibold p-2 px-6 rounded-full w-full ${widthFull ? "w-full" : "max-w-[400px]"}`}>
             {label}
         </div>
     )
