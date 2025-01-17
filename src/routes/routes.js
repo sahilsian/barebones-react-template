@@ -9,6 +9,7 @@ import Navigation from "../components/navigation";
 import { tabs } from "../constants/constants";
 import Spacer from "../components/spacer";
 import Footer from "../components/footer/footer";
+import Testimonials from "../components/testimonials/testimonials";
 
 const AppRoutes = () => {
     const { user, theme } = useContext(Context);
@@ -32,6 +33,7 @@ const AppRoutes = () => {
                         </Routes>
                 }
             </div>
+            <Testimonials/>
             <Footer/>
 
         </div>
