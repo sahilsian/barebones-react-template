@@ -14,7 +14,7 @@ const AppRoutes = () => {
     const { user, theme } = useContext(Context);
     const [loading, setLoading] = useState(false)
     return (
-        <div style={{  }}>
+        <div style={{ }}>
             <Navigation tabs={tabs}>
             </Navigation>
             <div className="min-h-[100vh]" >

@@ -1,9 +1,10 @@
 import ImageText from "../imageText"
 
-const FourCol = ({arr}) => {
+const FlexCol = ({arr, pagination=[0,3]}) => {
+
     return (
         <div className="flex flex-wrap gap-4">
-            {arr.slice(0, 4).map((item) => {
+            {arr.slice(pagination[0], pagination[1]).map((item) => {
                 return (
                     <div className="flex-1">
                     <ImageText source={item.image} title={item.mame} description={item.description} alt={item.alt}></ImageText>
@@ -14,4 +15,4 @@ const FourCol = ({arr}) => {
     )
 }
 
-export default FourCol
+export default FlexCol
