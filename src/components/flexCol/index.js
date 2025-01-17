@@ -1,18 +1,28 @@
 import ImageText from "../imageText"
+import { HoverImageText } from "../components/hoverImageText/hoverImageText";
 
-const FlexCol = ({arr, pagination=[0,3]}) => {
+const FlexCol = ({ arr, pagination = [0, 3], variant = "default" }) => {
+  return (
+    <div className="flex flex-wrap gap-4">
+      {arr.slice(pagination[0], pagination[1]).map((item) => {
+        switch (variant) {
+          case "hover":
+            //  goes into the hover effect image based display
+            return (
+              <div className="flex-1">
+                <HoverImageText source={item.image} title={item.mame} description={item.description} alt={item.alt} />
+              </div>
+            );
+          default:
+            return (
+              <div className="flex-1">
+                <ImageText source={item.image} title={item.mame} description={item.description} alt={item.alt}/>
+              </div>
+            );
+        }
+      })}
+    </div>
+  );
+};
 
-    return (
-        <div className="flex flex-wrap gap-4">
-            {arr.slice(pagination[0], pagination[1]).map((item) => {
-                return (
-                    <div className="flex-1">
-                    <ImageText source={item.image} title={item.mame} description={item.description} alt={item.alt}></ImageText>
-                    </div>
-                )
-            })}
-        </div>
-    )
-}
-
-export default FlexCol
+export default FlexCol;
