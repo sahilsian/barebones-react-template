@@ -6,21 +6,27 @@ import Headshot from "../../../public/images/sahil.jpg"
 import FourCol from "../../../components/fourCol";
 import { art } from "../../../constants/constants";
 import { ProductUI } from "../../../constants/constants";
+import Hero from "../../../components/hero";
 const Home = () => {
     return (
         <div>
-            <Image rounded src={Headshot}></Image>
-            <Spacer height="10px"></Spacer>
-            <Text level={"1"} text={"Hi, I'm Sahil."}></Text>
-            <i><Text level={"p"} text={"I like to draw and code :P"}></Text> </i>
-            <b><Text level={"p"} text={"Fullstack Developer, Award Winning Multidisciplinary Artist & Designer."}></Text> </b>
-            <Spacer height="10px"></Spacer>
-            <Spacer height="20px"></Spacer>
-            <Text level={"2"} text={"Art & Design"}></Text>
-            <FourCol arr={art}></FourCol>
-            <Spacer height="40px"></Spacer>
-            <Text level={"2"} text={"Product & UI"}></Text>
-            <FourCol arr={ProductUI}></FourCol>
+            <Spacer height="820px"></Spacer>
+            <Hero></Hero>
+            <div className=" bg-[#FFF]">
+                <Image rounded src={Headshot}></Image>
+                <Spacer height="10px"></Spacer>
+                <Text level={"1"} text={"Hi, I'm Sahil."}></Text>
+                <i><Text level={"p"} text={"I like to draw and code :P"}></Text> </i>
+                <b><Text level={"p"} text={"Fullstack Developer, Award Winning Multidisciplinary Artist & Designer."}></Text> </b>
+                <Spacer height="10px"></Spacer>
+                <Spacer height="20px"></Spacer>
+                <Text level={"2"} text={"Art & Design"}></Text>
+                <FourCol arr={art}></FourCol>
+                <Spacer height="40px"></Spacer>
+                <Text level={"2"} text={"Product & UI"}></Text>
+                <FourCol arr={ProductUI}></FourCol>
+            </div>
+
         </div>
     )
 }

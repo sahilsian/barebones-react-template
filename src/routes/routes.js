@@ -14,11 +14,10 @@ const AppRoutes = () => {
     const { user, theme } = useContext(Context);
     const [loading, setLoading] = useState(false)
     return (
-        <div style={{ backgroundColor: theme.background }}>
+        <div style={{  }}>
             <Navigation tabs={tabs}>
             </Navigation>
-            <div className="mx-auto max-w-[1280px] p-4 min-h-[100vh]" >
-                <Spacer height="20px"></Spacer>
+            <div className="min-h-[100vh]" >
                 {
                     loading ?
                         <Loading loading={loading}></Loading>

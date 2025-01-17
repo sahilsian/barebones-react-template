@@ -20,7 +20,7 @@ const Text = ({level, bold, text, color, align, underline}) => {
     }
 
     return (
-        <div style={{color: theme.text, fontWeight: bold && "bold"}} className={`${ TextMap[level]} ${AlignMap[align]} ${underline && "underline"}`}>{text}</div>
+        <div style={{color: color ? color :  theme.text, fontWeight: bold && "bold"}} className={`${ TextMap[level]} ${AlignMap[align]} ${underline && "underline"}`}>{text}</div>
     )
 }
 
