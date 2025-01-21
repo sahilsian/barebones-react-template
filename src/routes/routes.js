@@ -10,6 +10,7 @@ import { tabs } from "../constants/constants";
 import Spacer from "../components/spacer";
 import Footer from "../components/footer/footer";
 import Testimonials from "../components/testimonials/testimonials";
+import { HoverImageText } from "../components/hoverImageText/hoverImageText";
 
 const AppRoutes = () => {
     const { user, theme } = useContext(Context);
