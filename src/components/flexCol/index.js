@@ -1,7 +1,6 @@
+import { HoverImageText } from "../hoverImageText/hoverImageText";
 import ImageText from "../imageText"
-import { HoverImageText } from "../components/hoverImageText/hoverImageText";
-
-const FlexCol = ({ arr, pagination = [0, 3], variant = "default" }) => {
+const FlexCol = ({ arr, pagination = [0, 3], variant = "default", hasDescription }) => {
   return (
     <div className="flex flex-wrap gap-4">
       {arr.slice(pagination[0], pagination[1]).map((item) => {
