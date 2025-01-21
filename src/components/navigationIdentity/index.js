@@ -4,12 +4,12 @@ import Text from "../text"
 const NavigationIdentity = ({heading="Rec N Roll", subheading="Campbellton, NB"}) => {
     return (
         <div className="flex gap-5">
-            <div>
+            <div className="border-1px">
                 <Logo></Logo>
             </div>
             <div>
-                <Text level={"2"} text={heading}></Text>
-                <Text level={"4"} text={subheading}></Text>
+                <Text color={"#FFFFFF"} level={"4"} text={heading}></Text>
+                <Text color={"#FFFFFF"} level={"6"} text={subheading}></Text>
             </div>
         </div>
     )

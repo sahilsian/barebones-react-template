@@ -6,7 +6,11 @@ module.exports = {
     "./node_modules/@nextui-org/theme/dist/components/(slider|popover).js"
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        overused: ['OverusedGrotesk', 'sans-serif']
+      }
+    },
   },
   plugins: [nextui()],
 }

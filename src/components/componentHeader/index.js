@@ -1,17 +1,17 @@
 import Logo from "../logo"
 import TitleSubheading from "../titleSubheading"
 
-const ComponentHeader = () => {
+const ComponentHeader = ({title, subtitle}) => {
     return (
         <div>
             <div className="flex justify-between">
                 {/* title */}
-                <div>
-                    <TitleSubheading></TitleSubheading>
+                <div className="max-w-[600px]">
+                    <TitleSubheading title={title} subtitle={subtitle}></TitleSubheading>
                 </div>
                 {/* logo */}
                 <div>
-                    <Logo></Logo>
+                    <Logo height="120px" width="120px"></Logo>
                 </div>
             </div>
         </div>

@@ -1,7 +1,9 @@
-const Hyperlink = ({hyperlink, hyperlink_text, theme}) => {
+import Text from "../text"
+
+const Hyperlink = ({children, hyperlink, hyperlink_text, theme}) => {
     return (
         <span>
-            <a style={{color: theme.colors.hyperlink}} href={hyperlink} className={"underline font-bold"}>{hyperlink_text}</a>
+            <a href={hyperlink} className={"underline text-white"}>{children}</a>
         </span>
     )
 }
