@@ -4,13 +4,13 @@ import { Context } from "../../lib/context_provider";
 const Text = ({level, bold, text, color, align, underline}) => {
     const { theme } = useContext(Context);
     const TextMap = {
-        "1": "font-semibold text-[2rem] mb-2",
-        "2": "font-semibold text-[1.7rem] mb-2",
-        "3": "font-semibold text-[1.5rem] mb-2",
-        "4": "font-semibold text-[1rem]",
-        "5": "font-medium text-[0.9rem]",
+        "1": "text-[4.5rem] mb-2",
+        "2": "text-[3rem]",
+        "3": "text-[1.7rem] mb-2",
+        "4": "text-[1.4rem]",
+        "5": "font-medium text-[1rem]  tracking-widest",
         "6": "font-medium text-[0.9rem] opacity-70",
-        "p": "text-[1rem] mb-2"
+        "p": "text-[1.2rem] mb-2"
     }
 
     const AlignMap = {
@@ -20,7 +20,7 @@ const Text = ({level, bold, text, color, align, underline}) => {
     }
 
     return (
-        <div style={{color: color ? color :  theme.text, fontWeight: bold && "bold"}} className={`${ TextMap[level]} ${AlignMap[align]} ${underline && "underline"}`}>{text}</div>
+        <div style={{color: color ? color :  theme.text, fontWeight: bold && "bold"}} className={`font-overused ${level} ${TextMap[level]} ${AlignMap[align]} ${underline && "underline"}`}>{text}</div>
     )
 }
 

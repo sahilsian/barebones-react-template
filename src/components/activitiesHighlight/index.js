@@ -1,11 +1,11 @@
 import { Activities } from "../../constants/constants"
 import FlexCol from "../flexCol"
 
-const ActivitiesHighlight = ({ theme }) => {
+const ActivitiesHighlight = ({ theme, arr }) => {
     return (
-        <div className="md:mt-[-50px]">
+        <div className="">
             <div className="flex w-full gap-4">
-                <FlexCol arr={Activities} pagination={[0,3]}>
+                <FlexCol hasDescription={false} arr={arr} pagination={[0,3]}>
                 </FlexCol>
             </div>
 
