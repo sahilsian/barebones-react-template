@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Context } from "../../lib/context_provider";
+import { Context } from "../../utils/context_provider";
 
 const Text = ({level, bold, text, color, align, underline}) => {
     const { theme } = useContext(Context);

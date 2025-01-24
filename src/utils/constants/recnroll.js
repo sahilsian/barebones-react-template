@@ -1,10 +1,40 @@
 import { FaFacebook, FaInstagram, FaTiktok, FaYoutube } from "react-icons/fa";
-import About from "../routes/agnostic/about";
-import Home from "../routes/agnostic/home/home";
-import Birthday from "../public/images/birthday.jpg"
-import Golf from "../public/images/golf.jpg"
-import Bowling_Full from "../public/images/bowling_full.jpg"
-import Fish from "../public/images/fish.jpg"
+import About from "../../routes/agnostic/home/home";
+import Home from "../../routes/agnostic/home/home";
+import Birthday from "../../public/images/birthday.jpg"
+import Golf from "../../public/images/golf.jpg"
+import Bowling_Full from "../../public/images/bowling_full.jpg"
+import Fish from "../../public/images/fish.jpg"
+
+export const config = {
+    navigation: {
+        id: "navigation",
+        props: {},
+        blocks: [
+            {
+                alert_statement: {
+                    id: "",
+                    props: {},
+                    blocks: [
+
+                    ]
+                }
+            },
+            {
+                navigation_header: {
+                    id: "",
+                    props: {},
+                    blocks: [
+                        
+                    ]
+                }
+            },
+            {
+
+            }
+        ]
+    }
+}
 
 export const tabs = [
     {
@@ -57,6 +87,13 @@ export const themes = [
         }
     }
 ];
+
+export const Navigation_Config = {
+    alert_headline: "For more information, email us at:",
+    alert_hyperlink_text: "rnr@recnroll.ca",
+    navigation_heading: "Rec N Roll",
+    navigation_subheading: "Campbellton, NB"
+}
 
 
 export const Socials = [

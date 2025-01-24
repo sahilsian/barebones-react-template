@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Context } from "../../lib/context_provider";
+import { Context } from "../../utils/context_provider";
 import Text from "../text";
 import ActivitiesHighlight from "../activitiesHighlight";
 import Button from "../button";

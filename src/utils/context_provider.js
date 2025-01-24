@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { useState } from "react";
-import { themes } from '../constants/constants';
+import { themes } from './constants/recnroll';
 
 export const Context = React.createContext({
     user: null,

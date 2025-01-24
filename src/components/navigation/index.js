@@ -1,14 +1,14 @@
 import { useNavigate, useLocation } from "react-router-dom";
 import { useContext, useEffect, useState } from 'react'
 import Text from "../text";
-import { Context } from "../../lib/context_provider";
+import { Context } from "../../utils/context_provider";
 import { IoMenu } from "react-icons/io5";
 import AlertStatement from "../alertStatement";
 import NavigationIdentity from "../navigationIdentity";
 import Button from "../button";
-import useScrollPosition from "../../lib/hooks/useScrollPosition";
+import useScrollPosition from "../../utils/hooks/useScrollPosition";
 
-const Navigation = ({ tabs, label = "Our Activities" }) => {
+const Navigation = ({ tabs, label = "Our Activities", alert_headline="For more information, email us at:", alert_hyperlink_text="rnr@recnroll.ca", navigation_heading="Rec N Roll", navigation_subheading="Campbellton, NB"  }) => {
 
     const scrollPosition = useScrollPosition()
     const { theme } = useContext(Context);
@@ -19,12 +19,12 @@ const Navigation = ({ tabs, label = "Our Activities" }) => {
     }, [scrollPosition])
     return (
         <div className={`fixed ${scrollPosition > 100 && "bg-black"}  top-0 overflow-hidden flex flex-col w-full z-[100]`}>
-            <AlertStatement headline="For more information, email us at:" hyperlink_text="rnr@recnroll.ca" theme={theme}></AlertStatement>
+            <AlertStatement headline={alert_headline} hyperlink_text={alert_hyperlink_text} theme={theme}></AlertStatement>
             <div className={`p-5`}>
                 <div className={`flex  justify-between mx-auto w-full h-full max-w-[1280px] px-4`}>
                     <div className="block md:flex gap-4 items-center">
                         <div>
-                            <NavigationIdentity></NavigationIdentity>
+                            <NavigationIdentity subheading={navigation_subheading} heading={navigation_heading}></NavigationIdentity>
                         </div>
                     </div>
                     <div className="md:flex items-center gap-4">

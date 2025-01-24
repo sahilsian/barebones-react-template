@@ -8,7 +8,9 @@ const Hero = (
     {
         heading="Family fun in Campbellton", 
         subheading="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim  veniam, quis nostrud exercitation ullamco laboris nis", 
-        heroImg=Cover
+        heroImg=Cover,
+        primary_button_text="See our Activities",
+        secondary_button_text="Sign up"
     }) => {
 
     return (
@@ -40,10 +42,10 @@ const Hero = (
                                     <Spacer height="50px"></Spacer>
                                     <div className="flex gap-[12px]">
                                         <div className="max-w-[250px]">
-                                            <Button status="primary" label="See Our Activities"></Button>
+                                            <Button status="primary" label={primary_button_text}></Button>
                                         </div>
                                         <div className="max-w-[250px]">
-                                            <Button status="secondary" label="Sign Up"></Button>
+                                            <Button status="secondary" label={secondary_button_text}></Button>
                                         </div>
                                     </div>
                                     
