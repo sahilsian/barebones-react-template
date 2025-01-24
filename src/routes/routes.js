@@ -17,8 +17,7 @@ const AppRoutes = () => {
     const [loading, setLoading] = useState(false)
     return (
         <div>
-            <Navigation tabs={tabs}>
-            </Navigation>
+            
             <div className="min-h-[100vh]" >
                 {
                     loading ?

@@ -88,6 +88,13 @@ export const themes = [
     }
 ];
 
+export const Navigation_Config = {
+    alert_headline: "For more information, email us at:",
+    alert_hyperlink_text: "rnr@recnroll.ca",
+    navigation_heading: "Rec N Roll",
+    navigation_subheading: "Campbellton, NB"
+}
+
 
 export const Socials = [
     {

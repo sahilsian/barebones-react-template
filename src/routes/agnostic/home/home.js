@@ -8,14 +8,17 @@ import ActivityBar from "../../../components/activityBar";
 import ComponentHeader from "../../../components/componentHeader";
 import FlexCol from "../../../components/flexCol";
 import Center from "../../../components/center";
-import { Activities, Activities_Feature, Activities_Informational, Image_Text_Full_Row, Image_Text_Full_Row_Reverse } from "../../../utils/constants/recnroll";
+import { Activities, Activities_Feature, Activities_Informational, Image_Text_Full_Row, Image_Text_Full_Row_Reverse, tabs, Navigation_Config } from "../../../utils/constants/recnroll";
 import ImageTextFull from "../../../components/imageTextFull";
 import Testimonials from "../../../components/testimonials/testimonials";
+import Navigation from "../../../components/navigation";
 
 const Home = () => {
     
     return (
         <div>
+            <Navigation tabs={tabs} alert_headline={Navigation_Config.alert_headline} alert_hyperlink_text={Navigation_Config.alert_hyperlink_text} navigation_heading={Navigation_Config.navigation_heading} navigation_subheading={Navigation_Config.navigation_subheading}>
+            </Navigation>
             <Hero subheading={"Gather and Celebrate at Rec N Roll and enjoy our selection of activities. "} heading={"Everybody Needs a Little RnR..."}></Hero>
             <div className=" bg-[#FFF]">
                 <ActivityBar arr={Activities_Feature}></ActivityBar>
