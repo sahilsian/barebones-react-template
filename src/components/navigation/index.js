@@ -1,12 +1,12 @@
 import { useNavigate, useLocation } from "react-router-dom";
 import { useContext, useEffect, useState } from 'react'
 import Text from "../text";
-import { Context } from "../../lib/context_provider";
+import { Context } from "../../utils/context_provider";
 import { IoMenu } from "react-icons/io5";
 import AlertStatement from "../alertStatement";
 import NavigationIdentity from "../navigationIdentity";
 import Button from "../button";
-import useScrollPosition from "../../lib/hooks/useScrollPosition";
+import useScrollPosition from "../../utils/hooks/useScrollPosition";
 
 const Navigation = ({ tabs, label = "Our Activities" }) => {
 

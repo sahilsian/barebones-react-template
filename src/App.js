@@ -1,5 +1,5 @@
 import './public/css/app.css';
-import Provider from './lib/provider';
+import Provider from './utils/provider';
 
 function App() {
   return (

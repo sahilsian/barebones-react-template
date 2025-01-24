@@ -1,4 +1,4 @@
-import { Activities } from "../../constants/constants"
+import { Activities } from "../../utils/constants/recnroll"
 import FlexCol from "../flexCol"
 
 const ActivitiesHighlight = ({ theme, arr }) => {

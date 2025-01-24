@@ -1,4 +1,4 @@
-import { Socials } from "../../constants/constants"
+import { Socials } from "../../utils/constants/recnroll"
 
 const SocialRow = ({}) => {
     return (

@@ -8,7 +8,7 @@ import ActivityBar from "../../../components/activityBar";
 import ComponentHeader from "../../../components/componentHeader";
 import FlexCol from "../../../components/flexCol";
 import Center from "../../../components/center";
-import { Activities, Activities_Feature, Activities_Informational, Image_Text_Full_Row, Image_Text_Full_Row_Reverse } from "../../../constants/constants";
+import { Activities, Activities_Feature, Activities_Informational, Image_Text_Full_Row, Image_Text_Full_Row_Reverse } from "../../../utils/constants/recnroll";
 import ImageTextFull from "../../../components/imageTextFull";
 import Testimonials from "../../../components/testimonials/testimonials";
 
