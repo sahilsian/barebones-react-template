@@ -5,6 +5,8 @@ import Birthday from "../../public/images/birthday.jpg"
 import Golf from "../../public/images/golf.jpg"
 import Bowling_Full from "../../public/images/bowling_full.jpg"
 import Fish from "../../public/images/fish.jpg"
+import Sno_Fest_Logo from "../../public/images/sno_fest_logo.jpg"
+import Sno_Fest_Hero from "../../public/images/sno_fest_hero.jpg"
 
 export const config = {
     navigation: {
@@ -89,10 +91,46 @@ export const themes = [
 ];
 
 export const Navigation_Config = {
-    alert_headline: "For more information, email us at:",
-    alert_hyperlink_text: "rnr@recnroll.ca",
-    navigation_heading: "Rec N Roll",
-    navigation_subheading: "Campbellton, NB"
+    alert_headline: "For more information, call us at:",
+    alert_hyperlink_text: "+1 888-413-4433",
+    navigation_heading: "Campbellton Snofest",
+    navigation_subheading: "Campbellton, NB",
+    navigation_logo: Sno_Fest_Logo
+}
+
+export const Hero_Config = {
+    hero_heading: "Enjoy the Winter Magic with us.",
+    hero_subheading: "Come join us February 13th - 17th for the annual Campbellton Snofest.",
+    hero_img: Sno_Fest_Hero,
+    hero_vid: null,
+    primary_button_text: "See our Schedule",
+    primary_button_href: "https://google.com",
+    secondary_button_text: "Signup",
+    secondary_button_href: "https://google.com"
+}
+
+
+
+export const Highlight_Config = {
+    highlight_heading: "Annual Fun",
+    highlight_subheading: "February 13th - 17th",
+    highlight_arr: [
+        {
+            title: "Snofest Village",
+            description: "Text Here",
+            source: "https://i.imgur.com/KYzesVf.jpeg"
+        },
+        {
+            title: "Arcade",
+            description: "Arcade Text Here",
+            source: "https://img1.wsimg.com/isteam/ip/a1d5a11b-870a-4049-9f15-3ea947340f77/blob-04d8ea3.png/:/cr=t:0%25,l:10.74%25,w:78.52%25,h:100%25/rs=w:365,h:365,cg:true"
+        },
+        {
+            title: "Bowling",
+            description: "Arcade Text Here",
+            source: "https://img1.wsimg.com/isteam/ip/a1d5a11b-870a-4049-9f15-3ea947340f77/IMG_6314.jpeg/:/cr=t:12.5%25,l:0%25,w:100%25,h:75%25/rs=w:365,h:365,cg:true"
+        }
+    ]
 }
 
 

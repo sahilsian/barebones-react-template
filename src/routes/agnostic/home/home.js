@@ -8,7 +8,7 @@ import ActivityBar from "../../../components/activityBar";
 import ComponentHeader from "../../../components/componentHeader";
 import FlexCol from "../../../components/flexCol";
 import Center from "../../../components/center";
-import { Activities, Activities_Feature, Activities_Informational, Image_Text_Full_Row, Image_Text_Full_Row_Reverse, tabs, Navigation_Config } from "../../../utils/constants/recnroll";
+import { Activities, Activities_Feature, Activities_Informational, Image_Text_Full_Row, Image_Text_Full_Row_Reverse, tabs, Navigation_Config, Hero_Config, Highlight_Config } from "../../../utils/constants/recnroll";
 import ImageTextFull from "../../../components/imageTextFull";
 import Testimonials from "../../../components/testimonials/testimonials";
 import Navigation from "../../../components/navigation";
@@ -19,9 +19,17 @@ const Home = () => {
         <div>
             <Navigation tabs={tabs} alert_headline={Navigation_Config.alert_headline} alert_hyperlink_text={Navigation_Config.alert_hyperlink_text} navigation_heading={Navigation_Config.navigation_heading} navigation_subheading={Navigation_Config.navigation_subheading}>
             </Navigation>
-            <Hero subheading={"Gather and Celebrate at Rec N Roll and enjoy our selection of activities. "} heading={"Everybody Needs a Little RnR..."}></Hero>
+            <Hero 
+            heading={Hero_Config.hero_heading} 
+            subheading={Hero_Config.hero_subheading}
+            heroImg={Hero_Config.hero_img} 
+            heroVid={Hero_Config.hero_vid} 
+            primary_button_text={Hero_Config.primary_button_text} 
+            secondary_button_text={Hero_Config.secondary_button_text}>
+            </Hero>
             <div className=" bg-[#FFF]">
-                <ActivityBar arr={Activities_Feature}></ActivityBar>
+                <ActivityBar arr={Highlight_Config.highlight_arr}heading={Highlight_Config.highlight_heading}  subheading={Highlight_Config.highlight_subheading}>
+                </ActivityBar>
                 <Spacer height="40px"></Spacer>
                 <Center>
                     <ComponentHeader subtitle={"Located in Campbellton, NB, RnR is Restigouche's only Family Entertainment Centre offering Bowling, Play Room, Billy's Bistro, Birthday Party Packages, etc. (arcade, mini golf, enhanced play area to come in 2025!) "} title={"Bowl ! Play ! Eat !"}></ComponentHeader>

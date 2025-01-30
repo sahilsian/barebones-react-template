@@ -18,7 +18,7 @@ const Navigation = ({ tabs, label = "Our Activities", alert_headline="For more i
         console.log(scrollPosition)
     }, [scrollPosition])
     return (
-        <div className={`fixed ${scrollPosition > 100 && "bg-black"}  top-0 overflow-hidden flex flex-col w-full z-[100]`}>
+        <div className={`fixed ${scrollPosition > 100 && "bg-[#20346f]"}  top-0 overflow-hidden flex flex-col w-full z-[100]`}>
             <AlertStatement headline={alert_headline} hyperlink_text={alert_hyperlink_text} theme={theme}></AlertStatement>
             <div className={`p-5`}>
                 <div className={`flex  justify-between mx-auto w-full h-full max-w-[1280px] px-4`}>

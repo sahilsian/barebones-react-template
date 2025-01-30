@@ -4,11 +4,12 @@ import Text from "../text";
 import ActivitiesHighlight from "../activitiesHighlight";
 import Button from "../button";
 import Spacer from "../spacer";
+import { Highlight_Config } from "../../utils/constants/recnroll";
 
-const ActivityBar = ({arr=[], heading="Activities", subheading="See the Family Fun at Rec N Roll", cta_label="See More"}) => {
+const ActivityBar = ({arr=Highlight_Config.highlight_arr, heading=Highlight_Config.highlight_heading, subheading=Highlight_Config.highlight_subheading, cta_label="See Events"}) => {
     const { theme } = useContext(Context);
     return (
-        <div className="p-4 z-30 bg-[#fdf4dd] min-h-[320px]">
+        <div className="p-4 z-30 bg-[#d0ecf7] min-h-[320px]">
             <div className=" max-w-[1280px] mx-auto flex gap-[30px]">
                 <div className="flex-1 px-2 mt-5">
                     <Text level={2} text={heading}></Text>
