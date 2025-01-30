@@ -121,9 +121,9 @@ export const Highlight_Config = {
             source: "https://i.imgur.com/KYzesVf.jpeg"
         },
         {
-            title: "Arcade",
+            title: "Text Here",
             description: "Arcade Text Here",
-            source: "https://img1.wsimg.com/isteam/ip/a1d5a11b-870a-4049-9f15-3ea947340f77/blob-04d8ea3.png/:/cr=t:0%25,l:10.74%25,w:78.52%25,h:100%25/rs=w:365,h:365,cg:true"
+            source: "https://i.imgur.com/sE6sz2l.jpeg"
         },
         {
             title: "Bowling",

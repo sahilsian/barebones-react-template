@@ -32,22 +32,22 @@ const Hero = (
                 </div>
                 <div className="mx-auto max-w-[1280px] p-4 h-full absolute z-10 w-full flex flex-col justify-center">
                     <div className="px-2 ">
-                        <div className="flex h-full">
+                        <div className="flex h-full justify-center">
                             <div className="flex-1 flex justify-between flex-col w-full">
                                 <div className="flex-1">
                                     {/* Layout Purposes */}
                                 </div>
 
                                 <div className=" flex-[3] w-full">
-                                    <div>
-                                        <Text color={"#FFFFFF"} level={1} text={heading}></Text>
+                                    <div className="max-w-[800px] mx-auto">
+                                        <Text align={"center"} color={"#FFFFFF"} level={1} text={heading}></Text>
                                     </div>
                                     <Spacer height="20px"></Spacer>
-                                    <div className="max-w-[400px]">
-                                        <Text color={"#FFFFFF"} level={"4"} text={subheading}></Text>
+                                    <div className="max-w-[400px] mx-auto">
+                                        <Text align={"center"} color={"#FFFFFF"} level={"4"} text={subheading}></Text>
                                     </div>
                                     <Spacer height="50px"></Spacer>
-                                    <div className="flex gap-[12px]">
+                                    <div className="flex gap-[12px] justify-center">
                                         <div className="max-w-[250px]">
                                             <Button status="primary" label={primary_button_text}></Button>
                                         </div>
@@ -63,9 +63,7 @@ const Hero = (
                                 </div>
 
                             </div>
-                            <div className="flex-1 flex">
-
-                            </div>
+                            
                         </div>
                     </div>
                 </div>
