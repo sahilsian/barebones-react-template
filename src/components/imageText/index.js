@@ -5,7 +5,7 @@ import Text from "../text"
 
 const ImageText = ({source="https://placehold.co/600x400/png", hasDescription=true, title='Art Piece', description="This is a description.", link="", shadow, maxHeight="400px", noText}) => {
     return (
-        <div className="min-w-[250px] w-full">
+        <div className="min-w-[300px] w-full max-w-[400px]">
             <div className="rounded-lg">
                 <Image maxHeight={maxHeight} shadow={shadow} src={source} width="100%" height="100%"></Image>
             </div>

@@ -9,8 +9,8 @@ import { Highlight_Config } from "../../utils/constants/recnroll";
 const ActivityBar = ({arr=Highlight_Config.highlight_arr, heading=Highlight_Config.highlight_heading, subheading=Highlight_Config.highlight_subheading, cta_label="See Events"}) => {
     const { theme } = useContext(Context);
     return (
-        <div className="p-4 z-30 bg-[#d0ecf7] min-h-[320px]">
-            <div className=" max-w-[1280px] mx-auto flex gap-[30px]">
+        <div className="p-4 py-20 z-30  min-h-[320px]">
+            <div className=" flex gap-[30px]">
                 {/* <div className="flex-1 px-2 mt-5">
                     <Text level={2} text={heading}></Text>
                     <Text level={"4"} text={subheading}></Text>

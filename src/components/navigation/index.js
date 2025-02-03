@@ -18,10 +18,12 @@ const Navigation = ({ tabs, label = "Our Activities", alert_headline="For more i
         console.log(scrollPosition)
     }, [scrollPosition])
     return (
-        <div className={`fixed ${scrollPosition > 100 && "bg-[#20346f]"}  top-0 overflow-hidden flex flex-col w-full z-[100]`}>
+        <div className={`fixed ${((scrollPosition > 100) || active) && "bg-[#20346f]"}  top-0 overflow-hidden flex flex-col w-full z-[100] pt-[40px] md:pt-[0px] px-7`}>
+            <div className="md:block hidden">
             <AlertStatement headline={alert_headline} hyperlink_text={alert_hyperlink_text} theme={theme}></AlertStatement>
-            <div className={`p-5`}>
-                <div className={`flex  justify-between mx-auto w-full h-full max-w-[1280px] px-4`}>
+            </div>
+            <div className={`md:p-5`}>
+                <div className={`flex  justify-between mx-auto w-full h-full max-w-[1280px] md:px-4`}>
                     <div className="block md:flex gap-4 items-center">
                         <div>
                             <NavigationIdentity subheading={navigation_subheading} heading={navigation_heading}></NavigationIdentity>
@@ -31,22 +33,34 @@ const Navigation = ({ tabs, label = "Our Activities", alert_headline="For more i
                         {tabs.map((tab) => {
                             return (
 
-                                <div className={` ${!active && "hidden"} md:flex `}>
+                                <div className={`hidden md:flex `}>
                                     <NavigationTab theme={theme} name={tab.name} route={tab.route}></NavigationTab>
                                 </div>
                             )
                         })}
-                        <Button label={label}></Button>
+                        <div className="md:block hidden">
+                            <Button label={label}></Button>
+                        </div>
                     </div>
 
 
                     <div className="md:hidden  mb-[6px]">
                         <div onClick={() => {
                             setActive(!active)
-                        }} style={{ borderColor: theme.text }} className="rounded-sm border-[1px]">
-                            <IoMenu size={32} color={theme.text}></IoMenu>
+                        }} style={{ borderColor: "#FFFFFF" }} className="rounded-sm border-[1px]">
+                            <IoMenu size={32} color={"#FFFFFF"}></IoMenu>
                         </div>
                     </div>
+                </div>
+                <div className="md:hidden py-4">
+                {tabs.map((tab) => {
+                            return (
+
+                                <div className={` ${!active && "hidden"} md:flex `}>
+                                    <NavigationTab theme={theme} name={tab.name} route={tab.route}></NavigationTab>
+                                </div>
+                            )
+                        })}
                 </div>
             </div>
 

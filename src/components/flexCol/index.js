@@ -1,8 +1,10 @@
 import { HoverImageText } from "../hoverImageText/hoverImageText";
 import ImageText from "../imageText"
-const FlexCol = ({ arr, pagination = [0, 3], variant = "default", hasDescription, noText }) => {
+const FlexCol = ({ arr, pagination = [0, 3], variant = "default", hasDescription, noText, flexWrap }) => {
   return (
-    <div className="flex flex-wrap gap-4">
+    <div className={`flex flex-wrap gap-4 justify-center items-center`}>
+
+
       {arr.slice(pagination[0], pagination[1]).map((item) => {
         switch (variant) {
           case "hover":

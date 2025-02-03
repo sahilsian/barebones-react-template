@@ -4,7 +4,7 @@ import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 const Testimonials = () => {
 
   return (
-    <section className="bg-[#D07935] relative text-white py-32 min-h-[400px]">
+    <section className="bg-[#20346f] relative text-white py-32 min-h-[400px]">
         {/* ask about spacing and orientation here, mines just by trial and error */}
       <div className="max-w-4xl mx-auto px-4 text-center">
 

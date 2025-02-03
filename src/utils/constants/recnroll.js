@@ -43,32 +43,6 @@ export const tabs = [
         name: "Home",
         route: "",
         component: <Home></Home>
-    },
-    {
-        name: "About",
-        route: "about",
-        component: <About></About>
-    },
-    {
-        name: "Entertainment",
-        route: "about",
-        component: <About></About>
-    },
-    {
-        name: "Bowling",
-        route: "about",
-        component: <About></About>
-    },
-    {
-        name: "Arcade",
-        route: "about",
-        component: <About></About>
-    }
-    ,
-    {
-        name: "Food",
-        route: "about",
-        component: <About></About>
     }
 ]
 
@@ -99,9 +73,9 @@ export const Navigation_Config = {
 }
 
 export const Hero_Config = {
-    hero_heading: "Enjoy the Winter Magic with us.",
+    hero_heading: "Enjoy the Winter Magic",
     hero_subheading: "Come join us February 13th - 17th for the annual Campbellton Snofest.",
-    hero_img: Sno_Fest_Hero,
+    hero_img: "https://i.imgur.com/08wAnpN.jpeg",
     hero_vid: null,
     primary_button_text: "See our Schedule",
     primary_button_href: "https://google.com",
@@ -116,21 +90,115 @@ export const Highlight_Config = {
     highlight_subheading: "February 13th - 17th",
     highlight_arr: [
         {
+            title: "Snofest Team",
+            description: "",
+            source: "https://i.imgur.com/08wAnpN.jpeg"
+        },
+        {
             title: "Snofest Village",
-            description: "Text Here",
+            description: "",
             source: "https://i.imgur.com/KYzesVf.jpeg"
         },
         {
-            title: "Text Here",
-            description: "Arcade Text Here",
+            title: "Snofest Activity",
+            description: "",
+            source: "https://i.imgur.com/GbBi3Yn.jpeg"
+        },
+        {
+            title: "Elephant Snowman",
+            description: "",
             source: "https://i.imgur.com/sE6sz2l.jpeg"
         },
         {
-            title: "Bowling",
-            description: "Arcade Text Here",
-            source: "https://img1.wsimg.com/isteam/ip/a1d5a11b-870a-4049-9f15-3ea947340f77/IMG_6314.jpeg/:/cr=t:12.5%25,l:0%25,w:100%25,h:75%25/rs=w:365,h:365,cg:true"
+            title: "Spongebob Snowman",
+            description: "",
+            source: "https://i.imgur.com/R6HvFex.jpeg"
         }
     ]
+}
+
+export const Image_Text_Full_Location = {
+    descriptor: "LOTS OF FAMILY FUN",
+    heading: "Campbellton's regional winter celebration",
+    subheading: "Campbellton's regional winter celebration has a full week of fun in store for the whole family. Take in the entertainment at the Sno-Fest Village at Sugarloaf Provincial Park, find snow sculptures all over town, take part in special activities at the museum, library and art gallery, enjoy sleigh rides, tube sliding, skating, games, concerts and so much more. Don't miss the Family Day events!",
+    image_source: "https://i.imgur.com/oXMRY6E.jpeg",
+    cta_text: "Read More about Us",
+    cta_link: "https://google.com"
+}
+
+export const Image_Text_Full_Activities = {
+    descriptor: "LOTS OF FAMILY FUN",
+    heading: "Campbellton's regional winter celebration",
+    subheading: "Campbellton's regional winter celebration has a full week of fun in store for the whole family. Take in the entertainment at the Sno-Fest Village at Sugarloaf Provincial Park, find snow sculptures all over town, take part in special activities at the museum, library and art gallery, enjoy sleigh rides, tube sliding, skating, games, concerts and so much more. Don't miss the Family Day events!",
+    image_source: "https://i.imgur.com/J3XPizf.jpeg",
+    cta_text: "Read More about Us",
+    cta_link: "https://google.com"
+}
+
+export const Activities_Informational = [
+    {
+        title: "Snofest Village",
+        description: "Snofest village text will go here.",
+        source: "https://i.imgur.com/yH4A5vR.jpeg"
+    },
+    {
+        title: "Mini Putt",
+        description: "Mini Putt text goes here",
+        source: "https://i.imgur.com/DSUtfuq.jpeg"
+    },
+    {
+        title: "Various Kids Activities",
+        description: "Various kids activities goes here",
+        source: "https://i.imgur.com/4tyuMob.jpeg"
+    },
+    {
+        title: "Live Music",
+        description: "Live Music text goes here",
+        source: "https://i.imgur.com/UMEwADn.jpeg"
+    },
+    {
+        title: "Arts and Crafts",
+        description: "Arts and Crafts text goes here",
+        source: "https://i.imgur.com/8Z4RPvl.jpeg"
+    },
+    {
+        title: "Skiing",
+        description: "Skiing text goes here",
+        source: "https://i.imgur.com/ZsoxEfL.jpeg"
+    }
+]
+
+export const Featured_Activities = {
+    title: "Celebrate Winter", 
+    subtitle: "At the Campbellton Sno-Fest, visitors can also enjoy live music, food vendors, and other entertainment throughout the festival. With its family-friendly atmosphere and activities, it's a must for anyone looking to embrace the cold and snowy weather in Restigouche."
+}
+
+export const Faq_Items = [
+    {
+        question: "Frequently Asked Question 1",
+        answer: "Answer to Question"
+    },
+    {
+        question: "Frequently Asked Question 2",
+        answer: "Answer to Question"
+    },
+    {
+        question: "Frequently Asked Question 3",
+        answer: "Answer to Question"
+    },
+    {
+        question: "Frequently Asked Question 4",
+        answer: "Answer to Question"
+    },
+    {
+        question: "Frequently Asked Question 5",
+        answer: "Answer to Question"
+    }
+]
+
+export const Featured_Faq = {
+    title: "Frequently Asked Questions", 
+    subtitle: "Have any questions? See our frequently asked questions or reach out to us!"
 }
 
 
@@ -189,35 +257,3 @@ export const Image_Text_Full_Row_Reverse = {
     cta_link: "https://google.com"
 }
 
-export const Activities_Informational = [
-    {
-        title: "Bowling",
-        description: "Looking for a little rnr? Rec n Roll offers an 8 lane bowling center with lots of fun events for all ages. Check out our bowling schedule and get in the action!",
-        source: "https://scontent-yyz1-1.xx.fbcdn.net/v/t39.30808-6/474018134_122197474334232008_5611768862522671141_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=100&ccb=1-7&_nc_sid=86c6b0&_nc_ohc=laLPbWmCcwQQ7kNvgFmH0XP&_nc_zt=23&_nc_ht=scontent-yyz1-1.xx&_nc_gid=AVCQsC6rbm9P0PYVPNqCznS&oh=00_AYBQH1fy8YcqWTKx_khsfiDkhtyXffm7SL7tRb971HE_NQ&oe=6794C7C9"
-    },
-    {
-        title: "Arcade (Coming Soon)",
-        description: "Coming soon to Rec n Roll, our arcade provides an incredible experience for those looking for fun. Our arcade is anticipated to have a variety of games and lots of prizes to win.",
-        source: "https://scontent-yyz1-1.xx.fbcdn.net/v/t39.30808-6/471190519_122192895734232008_1981575660280231824_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=107&ccb=1-7&_nc_sid=86c6b0&_nc_ohc=pQ61_Vhe1gkQ7kNvgExmc0l&_nc_zt=23&_nc_ht=scontent-yyz1-1.xx&_nc_gid=AMCILtRZI7MATghmmu0llBZ&oh=00_AYAHpaxtgensZ_6YILeH4QpuXoKGpkxo07tmSw02O2jgQw&oe=6794ADB8"
-    },
-    {
-        title: "Indoor Play Room",
-        description: "Our indoor playroom provides a wonderful experience for kids who want to have fun! Parents can relax while kids can enjoy a playroom specifically designed to be safe and entertaining all at the same time.",
-        source: "https://scontent-yyz1-1.xx.fbcdn.net/v/t39.30808-6/468915337_122189430962232008_2360857542946274468_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=833d8c&_nc_ohc=VrezgUFLoCkQ7kNvgFDEogr&_nc_zt=23&_nc_ht=scontent-yyz1-1.xx&_nc_gid=APg80L91gxtp_aANO6R7D39&oh=00_AYCTmIuTIyUQ9JWQ3AxEyTXyCkIiJMaAh1ETQGzHcDEtag&oe=6794A5B3"
-    },
-    {
-        title: "Billy's Bistro",
-        description: "Enjoy fine eats at Rec n Roll through Billy's Bistro. See our menu.",
-        source: "https://scontent-yyz1-1.xx.fbcdn.net/v/t39.30808-6/467642085_122187477068232008_7008331369652330692_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_ohc=WvteiQIAn44Q7kNvgG15Dqg&_nc_zt=23&_nc_ht=scontent-yyz1-1.xx&_nc_gid=ARL4cw6yXlkn0Tk1tvjpPue&oh=00_AYBup7Ree7XvimnmkUCE2xzy_oL8kNIcbWZ_IACh-6v9sg&oe=6794DD4B"
-    },
-    {
-        title: "Birthday Parties",
-        description: "Want to have a birthday party for you or someone special at Rec n Roll? Enjoy our selection of birthday plans",
-        source: Birthday
-    },
-    {
-        title: "Mini Golf (Coming Soon)",
-        description: "More information to come in 2025.",
-        source: Golf
-    }
-]
