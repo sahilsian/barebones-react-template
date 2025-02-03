@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
 @font-face {
   font-family: 'OverusedGrotesk';
   src: url('../fonts/OverusedGrotesk-Black.ttf') format('truetype');
@@ -114,12 +116,16 @@
   font-style: italic;
 }
 
+@font-face {
+  font-family: 'NotoSans';
+  src: url('../fonts/NotoSans-Variable.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+}
+
 * {
   -webkit-transition: background-color 100ms linear, color 100ms linear;
   -ms-transition: background-color 100ms linear, color 100ms linear;
   transition: background-color 100ms linear, color 100ms linear;
 }
 
-.good-shadow {
-    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
-}

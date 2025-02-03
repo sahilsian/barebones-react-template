@@ -3,12 +3,13 @@ import Image from "../image"
 import Spacer from "../spacer"
 import Text from "../text"
 
-const ImageText = ({source="https://placehold.co/600x400/png", hasDescription=true, title='Art Piece', description="This is a description.", link="", shadow, maxHeight="400px"}) => {
+const ImageText = ({source="https://placehold.co/600x400/png", hasDescription=true, title='Art Piece', description="This is a description.", link="", shadow, maxHeight="400px", noText}) => {
     return (
-        <div className="min-w-[250px] w-full">
+        <div className="min-w-[300px] w-full max-w-[400px]">
             <div className="rounded-lg">
                 <Image maxHeight={maxHeight} shadow={shadow} src={source} width="100%" height="100%"></Image>
             </div>
+            {!noText &&
             <div>
                 <Spacer height="12px"></Spacer>
                 {link ?
@@ -19,6 +20,7 @@ const ImageText = ({source="https://placehold.co/600x400/png", hasDescription=tr
                 
                 {hasDescription && <Text level={"p"} text={description}></Text>}
             </div>
+            }
         </div>
     )
 }

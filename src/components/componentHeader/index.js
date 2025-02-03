@@ -1,7 +1,7 @@
 import Logo from "../logo"
 import TitleSubheading from "../titleSubheading"
 
-const ComponentHeader = ({title, subtitle}) => {
+const ComponentHeader = ({title, subtitle, logo}) => {
     return (
         <div>
             <div className="flex justify-between">
@@ -10,9 +10,9 @@ const ComponentHeader = ({title, subtitle}) => {
                     <TitleSubheading title={title} subtitle={subtitle}></TitleSubheading>
                 </div>
                 {/* logo */}
-                <div>
+                {logo && <div className="hidden md:block">
                     <Logo height="120px" width="120px"></Logo>
-                </div>
+                </div>}
             </div>
         </div>
     )

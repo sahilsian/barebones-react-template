@@ -1,11 +1,11 @@
 import Image from "../image"
-import Logo_Img from "../../public/images/logo.png"
+import { Navigation_Config } from "../../utils/constants/recnroll"
 
-const Logo = ({logo_src=Logo_Img, height="72px", width="72px"}) => {
+const Logo = ({logo_src=Navigation_Config.navigation_logo, height="72px", width="72px"}) => {
     return (
         <div>
-            <div>
-                <Image height={height} width={width} src={logo_src}></Image>
+            <div >
+                <Image rounded height={height} width={width} src={Navigation_Config.navigation_logo}></Image>
             </div>
         </div>
         
