@@ -3,6 +3,7 @@ import Spacer from "../spacer"
 import Text from "../text"
 import { Hero_Config } from "../../utils/constants/recnroll"
 import { useParallax } from "react-scroll-parallax"
+import Image from "next/image"
 
 const Hero = (
 
@@ -29,7 +30,7 @@ const Hero = (
                         </video>
                     }
                     {heroImg &&
-                        <img ref={ref} src={heroImg} className="w-full h-full object-cover absolute z-0"></img>
+                        <Image ref={ref} src={heroImg.src} width={heroImg.width} height={heroImg.height} alt={heroImg.alt} className="w-full h-full object-cover absolute z-0"></Image>
                     }
                     <div  className="absolute z-[1] bg-[#070d21]  opacity-80 w-full h-full">
                     </div>
