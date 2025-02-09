@@ -1,7 +1,6 @@
 import Button from "../button"
 import Spacer from "../spacer"
 import Text from "../text"
-import Cover from "../../public/images/cover.mp4"
 import { Hero_Config } from "../../utils/constants/recnroll"
 import { useParallax } from "react-scroll-parallax"
 

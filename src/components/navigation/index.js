@@ -1,4 +1,4 @@
-import { useNavigate, useLocation } from "react-router-dom";
+import { useRouter } from "next/router";
 import { useContext, useEffect, useState } from 'react'
 import Text from "../text";
 import { Context } from "../../utils/context_provider";
@@ -7,6 +7,7 @@ import AlertStatement from "../alertStatement";
 import NavigationIdentity from "../navigationIdentity";
 import Button from "../button";
 import useScrollPosition from "../../utils/hooks/useScrollPosition";
+import Link from "next/link";
 
 const Navigation = ({ tabs, label = "Our Activities", alert_headline="For more information, email us at:", alert_hyperlink_text="rnr@recnroll.ca", navigation_heading="Rec N Roll", navigation_subheading="Campbellton, NB"  }) => {
 
@@ -33,7 +34,7 @@ const Navigation = ({ tabs, label = "Our Activities", alert_headline="For more i
                         {tabs.map((tab) => {
                             return (
 
-                                <div className={`hidden md:flex `}>
+                                <div key={tab.name} className={`hidden md:flex `}>
                                     <NavigationTab theme={theme} name={tab.name} route={tab.route}></NavigationTab>
                                 </div>
                             )
@@ -55,8 +56,7 @@ const Navigation = ({ tabs, label = "Our Activities", alert_headline="For more i
                 <div className="md:hidden py-4">
                 {tabs.map((tab) => {
                             return (
-
-                                <div className={` ${!active && "hidden"} md:flex `}>
+                                <div key={tab.name} className={` ${!active && "hidden"} md:flex `}>
                                     <NavigationTab theme={theme} name={tab.name} route={tab.route}></NavigationTab>
                                 </div>
                             )
@@ -69,22 +69,23 @@ const Navigation = ({ tabs, label = "Our Activities", alert_headline="For more i
 }
 
 const NavigationTab = ({ name, route, theme }) => {
-    const navigate = useNavigate();
-    const location = useLocation();
-    const path = location.pathname;
+    const router = useRouter();
+    const path = router.pathname;
     const isActive = route === "" ? path === "/" : path === `/${route}`;
+    console.log(route)
     return (
         <div className="">
+            <Link href={route}>
             <span
-                onClick={() => {
-                    navigate(`/${route}`)
-                }}
                 style={{ textDecorationColor: theme.text }}
-                className={` cursor-pointer ${isActive ? "font-semibold underline" : ""}`}
-            ><Text color={"#FFFFFF"} level={"p"} text={name}></Text></span>
-        </div>
-    )
-}
+                className={`cursor-pointer ${isActive ? "font-semibold underline" : ""}`}
+            >
+                <Text color={"#FFFFFF"} level={"p"} text={name}></Text>
+            </span>
+            </Link>
 
+        </div>
+    );
+};
 
 export default Navigation

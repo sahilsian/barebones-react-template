@@ -1,12 +1,11 @@
 import { FaFacebook, FaInstagram, FaTiktok, FaYoutube } from "react-icons/fa";
-import About from "../../routes/agnostic/home/home";
-import Home from "../../routes/agnostic/home/home";
-import Birthday from "../../public/images/birthday.jpg"
-import Golf from "../../public/images/golf.jpg"
-import Bowling_Full from "../../public/images/bowling_full.jpg"
-import Fish from "../../public/images/fish.jpg"
-import Sno_Fest_Logo from "../../public/images/sno_fest_logo.jpg"
-import Sno_Fest_Hero from "../../public/images/sno_fest_hero.jpg"
+import Home from "../../../pages/index";
+import Birthday from "../../../public/images/birthday.jpg"
+import Golf from "../../../public/images/golf.jpg"
+import Bowling_Full from "../../../public/images/bowling_full.jpg"
+import Fish from "../../../public/images/fish.jpg"
+import Sno_Fest_Logo from "../../../public/images/sno_fest_logo.jpg"
+import Sno_Fest_Hero from "../../../public/images/sno_fest_hero.jpg"
 
 export const config = {
     navigation: {
@@ -41,8 +40,7 @@ export const config = {
 export const tabs = [
     {
         name: "Home",
-        route: "",
-        component: <Home></Home>
+        route: "/",
     }
 ]
 

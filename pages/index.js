@@ -1,21 +1,15 @@
-import { useNavigate } from "react-router-dom"
-import Text from "../../../components/text";
-import Spacer from "../../../components/spacer";
-import Image from "../../../components/image";
-import Headshot from "../../../public/images/sahil.jpg"
-import Hero from "../../../components/hero";
-import ActivityBar from "../../../components/activityBar";
-import ComponentHeader from "../../../components/componentHeader";
-import FlexCol from "../../../components/flexCol";
-import Center from "../../../components/center";
-import { Activities, Activities_Feature, Activities_Informational, Image_Text_Full_Row, Image_Text_Full_Row_Reverse, tabs, Navigation_Config, Hero_Config, Highlight_Config, Image_Text_Full_Location, Image_Text_Full_Activities, Featured_Activities, Featured_Faq, Faq_Items } from "../../../utils/constants/recnroll";
-import ImageTextFull from "../../../components/imageTextFull";
-import Testimonials from "../../../components/testimonials/testimonials";
-import Navigation from "../../../components/navigation";
-import FAQ from "../../../components/faq";
+import Spacer from "../src/components/spacer";
+import Hero from "../src/components/hero";
+import ComponentHeader from "../src/components/componentHeader";
+import FlexCol from "../src/components/flexCol";
+import Center from "../src/components/center";
+import { Activities, Activities_Feature, Activities_Informational, Image_Text_Full_Row, Image_Text_Full_Row_Reverse, tabs, Navigation_Config, Hero_Config, Highlight_Config, Image_Text_Full_Location, Image_Text_Full_Activities, Featured_Activities, Featured_Faq, Faq_Items } from "../src/utils/constants/recnroll";
+import ImageTextFull from "../src/components/imageTextFull";
+import Testimonials from "../src/components/testimonials/testimonials";
+import Navigation from "../src/components/navigation";
+import FAQ from "../src/components/faq";
 
-const Home = () => {
-    
+export default function Home() {
     return (
         <div>
             <Navigation tabs={tabs} alert_headline={Navigation_Config.alert_headline} alert_hyperlink_text={Navigation_Config.alert_hyperlink_text} navigation_heading={Navigation_Config.navigation_heading} navigation_subheading={Navigation_Config.navigation_subheading}>
@@ -59,5 +53,3 @@ const Home = () => {
         </div>
     )
 }
-
-export default Home;
