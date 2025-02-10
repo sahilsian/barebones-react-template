@@ -613,7 +613,7 @@ export const Activities_Informational = [
             src: "https://i.imgur.com/ZsoxEfL.jpeg",
             width: 2625,
             height: 3500,
-            alt: "Sno-Fest mascot waving on a ski mountain with skiers in the background enjoying the slopes"
+            alt: "Sno-Fest mascot waving on a ski mountain with skiers in the background enjoying the slopes."
         }
     }
 ]
