@@ -75,7 +75,7 @@ export const Navigation_Config = {
     alert_hyperlink_text: "+1 888-413-4433",
     navigation_heading: "Campbellton Snofest",
     navigation_subheading: "Campbellton, NB",
-    cta_label: "See the 2025 Event Schedule",
+    cta_label: "See our Event Schedule",
     cta_route_to: "/events",
     navigation_logo: {
         src: Sno_Fest_Logo,
@@ -95,7 +95,7 @@ export const Hero_Config = {
         alt: "Hero image for snofest website of skiers on top of mountain"
     },
     hero_vid: null,
-    primary_button_text: "See our 2025 Schedule",
+    primary_button_text: "See our Event Schedule",
     primary_button_href: "/events",
     secondary_button_text: "Sponsors",
     secondary_button_href: "/sponsors"
@@ -555,67 +555,66 @@ export const Feb_17_Events = [
     }
 ];
 
-
 export const Activities_Informational = [
     {
         title: "Snofest Village",
-        description: "Snofest village text will go here.",
+        description: "Explore the heart of Sno-Fest at the Snofest Village, where you can enjoy local vendors, food, and a fun-filled atmosphere. This is the perfect place to gather with friends and family, shop, and experience the essence of the festival.",
         source: {
             src: "https://i.imgur.com/yH4A5vR.jpeg",
             width: 2625,
             height: 3500,
-            alt: "Woman hanging with the sno fest mascot"
-        } 
+            alt: "A woman smiling while hanging with the Sno-Fest mascot at the Snofest Village, a lively hub for festival goers"
+        }
     },
     {
         title: "Mini Putt",
-        description: "Mini Putt text goes here",
+        description: "Test your putting skills with our fun and family-friendly mini golf course at Sno-Fest. Perfect for all ages, this activity offers a great way to relax and enjoy the festival outdoors.",
         source: {
             src: "https://i.imgur.com/DSUtfuq.jpeg",
             width: 3375,
             height: 4500,
-            alt: "Mini putt at sno fest"
-        } 
+            alt: "A group of people enjoying mini putt at Sno-Fest, competing in a friendly game of mini golf"
+        }
     },
     {
         title: "Various Kids Activities",
-        description: "Various kids activities goes here",
+        description: "There’s endless fun for kids at Sno-Fest with a variety of activities to keep them entertained. From balloon animals to interactive games, the festival offers a safe and exciting space for kids to let their creativity shine.",
         source: {
             src: "https://i.imgur.com/4tyuMob.jpeg",
             width: 2250,
             height: 3000,
-            alt: "kids having fun at sno fest. Man blows baloon animals for kids."
-        }  
+            alt: "A man creating balloon animals for children at Sno-Fest, with kids enjoying various fun activities"
+        }
     },
     {
         title: "Live Music",
-        description: "Live Music text goes here",
+        description: "Sno-Fest features live performances by local bands and artists, offering a vibrant soundtrack to the festival. Whether you’re enjoying a relaxing afternoon or dancing the night away, the music adds to the festive atmosphere.",
         source: {
             src: "https://i.imgur.com/UMEwADn.jpeg",
             width: 2625,
             height: 3500,
-            alt: "Live music stage at sno fest village"
-        } 
+            alt: "Live music stage at Sno-Fest Village, with an audience enjoying a concert"
+        }
     },
     {
         title: "Arts and Crafts",
-        description: "Arts and Crafts text goes here",
+        description: "Get creative at the Arts and Crafts station, where festival-goers of all ages can make their own keepsakes and artwork. From painting to crafting, there’s something for everyone to create and take home.",
         source: {
             src: "https://i.imgur.com/8Z4RPvl.jpeg",
             width: 2625,
             height: 3500,
-            alt: "Kids creating crafts at snowfest village"
-        }  
+            alt: "Children crafting their own projects at Sno-Fest Village, surrounded by colorful materials and supplies"
+        }
     },
     {
         title: "Skiing",
-        description: "Skiing text goes here",
+        description: "Hit the slopes at Sno-Fest! Whether you're a seasoned skier or a beginner, enjoy the stunning mountain views and fresh snow as you take on the hills at this exciting festival activity.",
         source: {
             src: "https://i.imgur.com/ZsoxEfL.jpeg",
             width: 2625,
             height: 3500,
-            alt: "Image of sno fest mascot waving on a ski mountain"
-        }  
+            alt: "Sno-Fest mascot waving on a ski mountain with skiers in the background enjoying the slopes"
+        }
     }
 ]
 
@@ -626,26 +625,27 @@ export const Featured_Activities = {
 
 export const Faq_Items = [
     {
-        question: "Frequently Asked Question 1",
-        answer: "Answer to Question"
+        question: "What is Campbellton SnoFest?",
+        answer: "Campbellton SnoFest is an annual winter festival celebrating snow sports, outdoor activities, and local culture in Campbellton, New Brunswick."
     },
     {
-        question: "Frequently Asked Question 2",
-        answer: "Answer to Question"
+        question: "When does Campbellton SnoFest take place?",
+        answer: "Campbellton SnoFest typically takes place in February each year. Exact dates can vary, so it's best to check the official website or social media for updates."
     },
     {
-        question: "Frequently Asked Question 3",
-        answer: "Answer to Question"
+        question: "What activities are available at Campbellton SnoFest?",
+        answer: "Activities include snowshoeing, skiing, ice skating, snowboarding, live music, family-friendly events, food vendors, and much more!"
     },
     {
-        question: "Frequently Asked Question 4",
-        answer: "Answer to Question"
+        question: "Is there an entrance fee to Campbellton SnoFest?",
+        answer: "Many of the SnoFest activities are free to attend, but certain events or attractions may have a small fee. Check the SnoFest schedule for more details."
     },
     {
-        question: "Frequently Asked Question 5",
-        answer: "Answer to Question"
+        question: "Where can I find more information about Campbellton SnoFest?",
+        answer: "For the latest updates, schedules, and event information, visit the official Campbellton SnoFest website or follow their social media channels."
     }
 ]
+
 
 export const Featured_Faq = {
     title: "Frequently Asked Questions", 

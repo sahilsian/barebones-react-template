@@ -54,8 +54,8 @@ const Hero = (
                                         <Text align={"center"} color={"#FFFFFF"} level={"4"} text={subheading}></Text>
                                     </div>
                                     <Spacer height="50px"></Spacer>
-                                    <div className="flex gap-[12px] justify-center">
-                                        <div className="max-w-[250px]">
+                                    <div className="flex gap-[12px] justify-center flex-wrap">
+                                        <div className="max-w-[300px]">
                                             <Button status="primary" routeTo={primary_button_href} cta_label={primary_button_text}></Button>
                                         </div>
                                         <div className="max-w-[250px]">
