@@ -15,7 +15,7 @@ import { useState } from "react";
 import Snowman from "../src/components/snowman";
 import Footer from "../src/components/footer/footer";
 
-export default function Home() {
+export default function Events() {
 
   const [activeOngoingId, setActiveOngoingId] = useState(null);
   const [activeFeb8Id, setActiveFeb8Id] = useState(null);
@@ -66,23 +66,11 @@ export default function Home() {
         >
       </Navigation>
 
-      <Hero
-        heading={Hero_Config.hero_heading}
-        subheading={Hero_Config.hero_subheading}
-        heroImg={Hero_Config.hero_img}
-        heroVid={Hero_Config.hero_vid}
-        primary_button_text={Hero_Config.primary_button_text}
-        primary_botton_href={Hero_Config.primary_button_href}
-        secondary_button_text={Hero_Config.secondary_button_text}
-        secondary_button_href={Hero_Config.secondary_button_href}
-        >
-        
-      </Hero>
 
       <div className="">
-        <ImageTextFull right descriptor={Image_Text_Full_Activities.descriptor} heading={Image_Text_Full_Activities.heading} subheading={Image_Text_Full_Activities.subheading} cta_link={Image_Text_Full_Activities.cta_link} cta_text={Image_Text_Full_Activities.cta_text} img_source={Image_Text_Full_Activities.image_source}></ImageTextFull>
-        <ImageTextFull left descriptor={Image_Text_Full_Location.descriptor} heading={Image_Text_Full_Location.heading} subheading={Image_Text_Full_Location.subheading} cta_link={Image_Text_Full_Location.cta_link} cta_text={Image_Text_Full_Location.cta_text} img_source={Image_Text_Full_Location.image_source}></ImageTextFull>
         {/* ONGOING EVENTS */}
+        <div className="bg-[#23568D] h-[100px]"></div>
+
         <BlueBanner>
           <div>
             <Text level={3} text={"During the Festival"} color={"#FFFFFF"}></Text>
@@ -239,19 +227,6 @@ export default function Home() {
           <Snowman></Snowman>
 
           <div className="w-full max-w-[100px] border-b-[1px] border-[#FFFFFF20]"></div>
-          <Spacer height="20px"></Spacer>
-
-          {/* FEATURED ACTIVITIES */}
-          <ComponentHeader
-            logo
-            title={Featured_Activities.title}
-            subtitle={Featured_Activities.subtitle}
-          />
-          <Spacer height="40px"></Spacer>
-          <FlexCol arr={Activities_Informational} pagination={[0, 3]} />
-          <Spacer height="20px"></Spacer>
-          <FlexCol arr={Activities_Informational} pagination={[3, 6]} />
-
           <Spacer height="100px"></Spacer>
 
           {/* FAQ */}
@@ -260,14 +235,10 @@ export default function Home() {
             subtitle={Featured_Faq.subtitle}
           />
           <Spacer height="20px"></Spacer>
-
           <FAQ arr={Faq_Items} />
         </Center>
-
         <Spacer height="100px"></Spacer>
-        <Spacer height="100px"></Spacer>
-        
-        <Footer ></Footer>
+        <Footer></Footer>
       </div>
     </div>
   );

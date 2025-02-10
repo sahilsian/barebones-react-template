@@ -9,7 +9,7 @@ import Button from "../button";
 import useScrollPosition from "../../utils/hooks/useScrollPosition";
 import Link from "next/link";
 
-const Navigation = ({ tabs, label = "Our Activities", alert_headline="For more information, email us at:", alert_hyperlink_text="rnr@recnroll.ca", navigation_heading="Rec N Roll", navigation_subheading="Campbellton, NB"  }) => {
+const Navigation = ({ tabs, cta_label = "Our Activities", cta_route_to="/", alert_headline="For more information, email us at:", alert_hyperlink_text="rnr@recnroll.ca", navigation_heading="Rec N Roll", navigation_subheading="Campbellton, NB"  }) => {
 
     const scrollPosition = useScrollPosition()
     const { theme } = useContext(Context);
@@ -40,12 +40,12 @@ const Navigation = ({ tabs, label = "Our Activities", alert_headline="For more i
                             )
                         })}
                         <div className="md:block hidden">
-                            <Button label={label}></Button>
+                            <Button routeTo={cta_route_to} cta_label={cta_label}></Button>
                         </div>
                     </div>
 
 
-                    <div className="md:hidden  mb-[6px]">
+                    <div className="md:hidden mb-[6px] flex items-center">
                         <div onClick={() => {
                             setActive(!active)
                         }} style={{ borderColor: "#FFFFFF" }} className="rounded-sm border-[1px]">
@@ -75,7 +75,7 @@ const NavigationTab = ({ name, route, theme }) => {
     console.log(route)
     return (
         <div className="">
-            <Link href={route}>
+            <Link href={route} className="h-full flex items-center">
             <span
                 style={{ textDecorationColor: theme.text }}
                 className={`cursor-pointer ${isActive ? "font-semibold underline" : ""}`}

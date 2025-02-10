@@ -2,6 +2,13 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+.force-text-blue,
+.force-text-blue [style*="color"] {
+  color: #23568D !important;
+  border-color: #23568D !important;
+  border-bottom-color: #23568D !important;
+}
+
 
 
 @font-face {

@@ -1,6 +1,7 @@
 import { useState } from "react"
 import Text from "../text"
 import { FaChevronDown, FaChevronUp } from "react-icons/fa"
+import Spacer from "../spacer"
 
 const FAQ = ({title="FAQ", arr=[]}) => {
     const [active, setActive] = useState(0)

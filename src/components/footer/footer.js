@@ -4,7 +4,7 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="bg-[#75a6d1] text-gray-900">
+    <footer className="bg-[#20346f]">
       <div className="max-w-7xl mx-auto px-4 py-8">
         <div className="flex flex-col md:flex-row items-start justify-between gap-6  border-gray-300 pb-6">
 
@@ -12,8 +12,8 @@ const Footer = () => {
             {/* get logo */}
             
             <div>
-              <h2 className="text-2xl font-bold">Sno-Fest</h2>
-              <p className="text-gray-700">Campbellton, NB</p>
+              <h2 className="text-2xl font-bold text-white">Sno-Fest</h2>
+              <p className="text-white">Campbellton, NB</p>
             </div>
             
           </div>
@@ -35,14 +35,14 @@ const Footer = () => {
         {/* copyright very specific to footer */}
         <div className="flex flex-col md:flex-row items-center justify-between mt-8 text-sm space-y-2 md:space-y-0">
           
-          <p className="text-gray-500">
+          <p className="text-white">
             © 2024 Snofest |{' '}
-            <a
+            {/* <a
               href="#privacy"
               className="underline hover:text-orange-600"
             >
               Privacy
-            </a>
+            </a> */}
           </p>
         </div>
       </div>

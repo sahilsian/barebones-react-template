@@ -7,7 +7,7 @@ const NavigationIdentity = ({heading="Rec N Roll", subheading="Campbellton, NB"}
             <div className="border-1px">
                 <Logo></Logo>
             </div>
-            <div>
+            <div className="flex flex-col justify-center">
                 <Text color={"#FFFFFF"} level={"4"} text={heading}></Text>
                 <Text color={"#FFFFFF"} level={"6"} text={subheading}></Text>
             </div>

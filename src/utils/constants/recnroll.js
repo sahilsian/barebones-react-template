@@ -41,6 +41,14 @@ export const tabs = [
     {
         name: "Home",
         route: "/",
+    },
+    {
+        name: "Schedule",
+        route: "/events",
+    },
+    {
+        name: "Sponsors",
+        route: "/sponsors",
     }
 ]
 
@@ -67,6 +75,8 @@ export const Navigation_Config = {
     alert_hyperlink_text: "+1 888-413-4433",
     navigation_heading: "Campbellton Snofest",
     navigation_subheading: "Campbellton, NB",
+    cta_label: "See the 2025 Event Schedule",
+    cta_route_to: "/events",
     navigation_logo: {
         src: Sno_Fest_Logo,
         width: 75,
@@ -85,10 +95,10 @@ export const Hero_Config = {
         alt: "Hero image for snofest website of skiers on top of mountain"
     },
     hero_vid: null,
-    primary_button_text: "See our Schedule",
-    primary_button_href: "https://google.com",
-    secondary_button_text: "Signup",
-    secondary_button_href: "https://google.com"
+    primary_button_text: "See our 2025 Schedule",
+    primary_button_href: "/events",
+    secondary_button_text: "Sponsors",
+    secondary_button_href: "/sponsors"
 }
 
 
@@ -215,7 +225,336 @@ export const Ongoing_Events = [
         time: "All Day",
         location: "Sugarloaf Provincial Park Campsite"
     },
+    
 ]
+
+export const Feb_8_Events = [
+    {
+        title: "Creation of Valentine's Day Cards",
+        description: "Stop by the Campbellton Centennial Library to create Valentine's Day Cards that will be delivered to seniors in the community. All supplies provided. All ages welcome.",
+        date: "February 8",
+        time: "10:00 AM - 5:00 PM",
+        location: "Campbellton Centennial Library"
+    },
+    {
+        title: "Ice Sculptures",
+        description: "Watch skilled sculptors transform blocks of ice into stunning works of art at Sugarloaf Provincial Park.",
+        date: "February 8",
+        time: "2:00 PM",
+        location: "Sugarloaf Provincial Park"
+    },
+    {
+        title: "A Tribute to Motley Crüe",
+        description: "Rock out to an electrifying tribute performance dedicated to Motley Crüe! Tickets are $25 (+HST & fees) and available at Hard Luck Woman Records and Ticketpro.",
+        date: "February 8",
+        time: "7:30 PM",
+        location: "Alma Hall"
+    }
+];
+
+export const Feb_13_Events = [
+    {
+      title: "Guided Tours of the Athol House Museum",
+      description: "Discover the history of our county and its three founding cultures: Mi'kmaq, Acadian, and Scottish.",
+      date: "February 13",
+      time: "11:00 AM - 4:00 PM",
+      location: "Restigouche Gallery"
+    },
+    {
+      title: "Zentangle Club",
+      description: "Join the Campbellton Centennial Library to relax and create something beautiful. Open to ages 5 and up.",
+      date: "February 13",
+      time: "6:00 PM",
+      location: "Campbellton Centennial Library"
+    },
+    {
+      title: "A Tribute to the Former Atholville Carnaval Mascot",
+      description: "A special tribute event organized by the Campbellton Municipal Council.",
+      date: "February 13",
+      time: "6:00 PM",
+      location: "Alma Hall"
+    },
+    {
+      title: "Sno-Fest Night Life",
+      description: "Enjoy live music performances by local artists at various local bars.",
+      date: "February 13",
+      time: "Evening",
+      location: "Various local bars"
+    },
+    {
+      title: "Live Music: Danny Maltais",
+      description: "Enjoy a performance by Danny Maltais as part of the Sno-Fest Night Life event.",
+      date: "February 13",
+      time: "7:30 PM",
+      location: "Restigouche Snowmobile Club"
+    }
+];
+
+export const Feb_14_Events = [
+    {
+      title: "Guided Tours of the Athol House Museum",
+      description: "Discover the history of our county and its three founding cultures: Mi'kmaq, Acadian, and Scottish.",
+      date: "February 14",
+      time: "1:00 PM - 4:00 PM",
+      location: "Restigouche Gallery"
+    },
+    {
+      title: "Valentine’s Day Bingo",
+      description: "Join the Campbellton Centennial Library for a fun Valentine’s Day Bingo session. Places are limited, registration required at 506-753-5253.",
+      date: "February 14",
+      time: "3:45 PM - 4:45 PM",
+      location: "Campbellton Centennial Library"
+    },
+    {
+      title: "Sno-Fest Village",
+      description: "Enjoy various winter activities including a fire pit, hot chocolate, and fun games like mini putt, bowling, tic-tac-toe, and horse sleigh rides.",
+      date: "February 14",
+      time: "4:00 PM - 8:00 PM",
+      location: "Sugarloaf Provincial Park"
+    },
+    {
+      title: "Grand Opening at Sno-Fest Village",
+      description: "Official opening with cake, live music featuring James Young Band, and fireworks (weather permitting).",
+      date: "February 14",
+      time: "6:00 PM - 8:00 PM",
+      location: "Sugarloaf Provincial Park"
+    },
+    {
+      title: "Sno-Fest Night Life",
+      description: "Local bars feature live performances from talented musicians.",
+      date: "February 14",
+      time: "Evening",
+      location: "Various local bars"
+    },
+    {
+      title: "Live Music: Danny Maltais",
+      description: "Danny Maltais performs live as part of Sno-Fest Night Life.",
+      date: "February 14",
+      time: "7:00 PM",
+      location: "Brasserie 1026"
+    },
+    {
+      title: "Live Music: Daniel Poirier",
+      description: "Daniel Poirier performs live as part of Sno-Fest Night Life.",
+      date: "February 14",
+      time: "9:00 PM",
+      location: "Legion"
+    },
+    {
+      title: "Live Music: Bolton Creek Band",
+      description: "Bolton Creek Band performs live as part of Sno-Fest Night Life.",
+      date: "February 14",
+      time: "9:00 PM",
+      location: "Restigouche Snowmobile Club"
+    }
+];
+
+export const Feb_15_Events = [
+    {
+      title: "Meet Our Artists",
+      description: "A great opportunity to visit and talk with artists from the region who will paint, sculpt, and create on the spot!",
+      date: "February 15",
+      time: "10:00 AM - 4:00 PM",
+      location: "Restigouche Gallery"
+    },
+    {
+      title: "Legion Chili Luncheon",
+      description: "$15 for a bowl of chili, drink, and dessert.",
+      date: "February 15",
+      time: "11:00 AM - 1:00 PM",
+      location: "Royal Canadian Legion Branch 19",
+      information: "506-759-8025"
+    },
+    {
+      title: "Warm up at the Sno-Fest Cozy Corner",
+      description: "Enjoy face painting, crafts, a coloring contest, a magician, and a booth from the Campbellton Centennial Library.",
+      date: "February 15",
+      time: "12:00 PM - 6:00 PM",
+      location: "Sugarloaf Provincial Park Lodge"
+    },
+    {
+      title: "Sno-Fest Village",
+      description: "A fun-filled day with live entertainment, games, a fire pit, hot chocolate, and horse sleigh rides.",
+      date: "February 15",
+      time: "12:00 PM - 8:00 PM",
+      location: "Sugarloaf Provincial Park"
+    },
+    {
+      title: "Live Music: Claude Roy",
+      description: "Live performance by Claude Roy as part of the Sno-Fest Village entertainment lineup.",
+      date: "February 15",
+      time: "1:30 PM - 2:30 PM",
+      location: "Sugarloaf Provincial Park"
+    },
+    {
+      title: "Live Music: Daniel Poirier",
+      description: "Live performance by Daniel Poirier as part of the Sno-Fest Village entertainment lineup.",
+      date: "February 15",
+      time: "3:30 PM - 4:30 PM",
+      location: "Sugarloaf Provincial Park"
+    },
+    {
+      title: "Dance Party with DJ Tyler",
+      description: "A fun dance party featuring DJ Tyler.",
+      date: "February 15",
+      time: "6:00 PM - 7:30 PM",
+      location: "Sugarloaf Provincial Park"
+    },
+    {
+      title: "Hot Dog Fundraiser for the Sugarloaf Provincial Park",
+      description: "Free hot dogs, limit of 2 per person. Hosted by the Canadian Ski Patrol.",
+      date: "February 15",
+      time: "1:00 PM - 3:00 PM",
+      location: "Next to the Patrol First Aid Hut"
+    },
+    {
+      title: "Music with the Country Golden Girls",
+      description: "Live country music, free and open to all ages.",
+      date: "February 15",
+      time: "1:00 PM - 3:00 PM",
+      location: "Tide Head Fire Hall"
+    },
+    {
+      title: "Voices of Resilience",
+      description: "An evening of gastronomy and entertainment to benefit the Restigouche Suicide Prevention Committee. Tickets: $75.",
+      date: "February 15",
+      time: "5:30 PM",
+      location: "Alma Hall"
+    },
+    {
+      title: "Illuminated Pond Skating",
+      description: "Enjoy an evening of skating under the lights.",
+      date: "February 15",
+      time: "6:00 PM - 8:00 PM",
+      location: "Sugarloaf Provincial Park"
+    },
+    {
+      title: "Sno-Fest Night Life",
+      description: "Live performances at various local bars.",
+      date: "February 15",
+      time: "Evening",
+      location: "Various local bars"
+    },
+    {
+      title: "Live Music: Renelle & Tracy",
+      description: "Performance by Renelle & Tracy as part of Sno-Fest Night Life.",
+      date: "February 15",
+      time: "8:00 PM",
+      location: "Artisan Brewing Company"
+    },
+    {
+      title: "Live Music: Daniel Poirier",
+      description: "Live performance by Daniel Poirier as part of Sno-Fest Night Life.",
+      date: "February 15",
+      time: "9:00 PM",
+      location: "Legion"
+    },
+    {
+      title: "DJ Doozy",
+      description: "Dance the night away with DJ Doozy.",
+      date: "February 15",
+      time: "10:00 PM",
+      location: "Dooly's"
+    }
+];
+
+export const Feb_16_Events = [
+    {
+      title: "Warm up at the Sno-Fest Cozy Corner",
+      description: "Enjoy crafts, face painting, a magician, and a Love Tree activity. Canteen service available on-site ($).",
+      date: "February 16",
+      time: "12:00 PM - 5:00 PM",
+      location: "Sugarloaf Provincial Park Lodge"
+    },
+    {
+      title: "Sno-Fest Village",
+      description: "Live local entertainment, games, hot chocolate, a fire pit, and horse sleigh rides.",
+      date: "February 16",
+      time: "12:00 PM - 5:00 PM",
+      location: "Sugarloaf Provincial Park"
+    },
+    {
+      title: "Live Music: Paul Landry",
+      description: "Enjoy a live performance by Paul Landry as part of Sno-Fest Village entertainment.",
+      date: "February 16",
+      time: "1:30 PM - 2:30 PM",
+      location: "Sugarloaf Provincial Park"
+    },
+    {
+      title: "Live Music: Linda Bergeron",
+      description: "Enjoy a live performance by Linda Bergeron as part of Sno-Fest Village entertainment.",
+      date: "February 16",
+      time: "3:30 PM - 4:30 PM",
+      location: "Sugarloaf Provincial Park"
+    },
+    {
+      title: "Hot Dog Fundraiser",
+      description: "Free hot dogs, limit of 2 per person. Hosted by the Canadian Ski Patrol.",
+      date: "February 16",
+      time: "1:00 PM - 3:00 PM",
+      location: "Next to the Patrol First Aid Hut"
+    },
+    {
+      title: "Acoustic Country & Bluegrass Jam Session",
+      description: "A lively jam session organized by the Campbellton Bluegrass Festival.",
+      date: "February 16",
+      time: "2:00 PM - 4:00 PM",
+      location: "Restigouche Snowmobile Club"
+    },
+    {
+      title: "Family Glow Dance",
+      description: "A free dance party with UV lights, a magic show, glow bracelets, and more! Wear white or neon clothing.",
+      date: "February 16",
+      time: "6:00 PM - 9:00 PM",
+      location: "Centre de la Vallée, Val D'Amours"
+    }
+];
+
+export const Feb_17_Events = [
+    {
+      title: "Richelieu Family Day",
+      description: "Enjoy inflatable games, mascots, activities, snacks, and more! Organized by Club Richelieu de Campbellton.",
+      date: "February 17",
+      time: "10:00 AM - 12:00 PM",
+      location: "Le Galion des Appalaches School"
+    },
+    {
+      title: "Family Day at Sugarloaf Provincial Park",
+      description: "Try skiing, skating, snowshoeing, and more! Free ski/snowboard passes all day (registration required, equipment rental not included).",
+      date: "February 17",
+      time: "12:00 PM - 4:00 PM",
+      location: "Sugarloaf Provincial Park"
+    },
+    {
+      title: "Warm up at the Sno-Fest Cozy Corner",
+      description: "Enjoy crafts, face painting, a magician, and The Love Tree activity. Canteen service available on-site ($).",
+      date: "February 17",
+      time: "12:00 PM - 4:00 PM",
+      location: "Sugarloaf Provincial Park Lodge"
+    },
+    {
+      title: "Sno-Fest Village",
+      description: "Live local entertainment, games, hot chocolate, a fire pit, and horse sleigh rides.",
+      date: "February 17",
+      time: "12:00 PM - 4:00 PM",
+      location: "Sugarloaf Provincial Park"
+    },
+    {
+      title: "Live Music: Diane Ouellette",
+      description: "Enjoy a live performance by Diane Ouellette as part of the Sno-Fest Village entertainment.",
+      date: "February 17",
+      time: "1:30 PM - 2:30 PM",
+      location: "Sugarloaf Provincial Park"
+    },
+    {
+      title: "Live Music: Eva Malley",
+      description: "Enjoy a live performance by Eva Malley as part of the Sno-Fest Village entertainment.",
+      date: "February 17",
+      time: "3:00 PM - 4:00 PM",
+      location: "Sugarloaf Provincial Park"
+    }
+];
+
 
 export const Activities_Informational = [
     {
