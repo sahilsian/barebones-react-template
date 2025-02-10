@@ -85,7 +85,7 @@ export default function Home() {
         />
          <meta property="og:url" content={`${router.asPath}`}></meta>
         <meta property="og:type" content="website"></meta>
-        <meta property="og:title" content={"Events"}></meta>
+        <meta property="og:title" content={"Sno-Fest Home"}></meta>
         <meta content="Sno-Fest" property="og:site_name"></meta>
         <meta property="og:description" content={"Campbelltons New Brunswick annual Snow Fest is the most anticipated winter celebration with activities, music, food and fun."}
         ></meta>
