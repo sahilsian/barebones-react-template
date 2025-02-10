@@ -1,9 +1,16 @@
-const Image = ({src, rounded = false, width="100px", height="100px", shadow, maxHeight}) => {
+import Image from "next/image"
+
+const Img = ({src, rounded = false, width="100", height="100", shadow, maxHeight, alt}) => {
     return (
         <div>
-            <img className={`${rounded && "rounded-full"} object-cover ${shadow && "good-shadow"} ${maxHeight && `max-h-[${maxHeight}]`}`} src={src} width={width} height={height}></img>
+            <Image 
+            className={`${rounded && "rounded-full"} object-cover ${shadow && "good-shadow"} ${maxHeight && `max-h-[${maxHeight}]`}`} src={src} 
+            width={width} 
+            height={height}
+            alt={alt}
+            ></Image>
         </div>
     )
 }
 
-export default Image
+export default Img

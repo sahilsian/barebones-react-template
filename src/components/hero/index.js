@@ -1,9 +1,9 @@
 import Button from "../button"
 import Spacer from "../spacer"
 import Text from "../text"
-import Cover from "../../public/images/cover.mp4"
 import { Hero_Config } from "../../utils/constants/recnroll"
 import { useParallax } from "react-scroll-parallax"
+import Image from "next/image"
 
 const Hero = (
 
@@ -13,7 +13,9 @@ const Hero = (
         heroImg = Hero_Config.hero_img,
         heroVid = Hero_Config.hero_vid,
         primary_button_text = Hero_Config.primary_button_text,
-        secondary_button_text = Hero_Config.secondary_button_text
+        primary_button_href = Hero_Config.primary_button_href,
+        secondary_button_text = Hero_Config.secondary_button_text,
+        secondary_button_href = Hero_Config.secondary_button_href
     }) => {
 
     const { ref } = useParallax({
@@ -30,7 +32,7 @@ const Hero = (
                         </video>
                     }
                     {heroImg &&
-                        <img ref={ref} src={heroImg} className="w-full h-full object-cover absolute z-0"></img>
+                        <Image ref={ref} src={heroImg.src} width={heroImg.width} height={heroImg.height} alt={heroImg.alt} className="w-full h-full object-cover absolute z-0"></Image>
                     }
                     <div  className="absolute z-[1] bg-[#070d21]  opacity-80 w-full h-full">
                     </div>
@@ -54,10 +56,10 @@ const Hero = (
                                     <Spacer height="50px"></Spacer>
                                     <div className="flex gap-[12px] justify-center">
                                         <div className="max-w-[250px]">
-                                            <Button status="primary" label={primary_button_text}></Button>
+                                            <Button status="primary" routeTo={primary_button_href} cta_label={primary_button_text}></Button>
                                         </div>
                                         <div className="max-w-[250px]">
-                                            <Button status="secondary" label={secondary_button_text}></Button>
+                                            <Button status="secondary" cta_label={secondary_button_text} routeTo={secondary_button_href}></Button>
                                         </div>
                                     </div>
 

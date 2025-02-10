@@ -1,6 +1,6 @@
 import { useParallax } from "react-scroll-parallax";
 import Center from "../center"
-import Image from "../image"
+import Img from "../image"
 import Info from "../info"
 
 const ImageTextFull = ({ descriptor = "NOW", heading = "Heading", subheading = "Subheading", cta_text = "See More", cta_link = "https://google.com/", img_source, left, right }) => {
@@ -36,7 +36,7 @@ const ImageTextFull = ({ descriptor = "NOW", heading = "Heading", subheading = "
 
                 </div>
                 <div ref={refimg.ref} className="w-full right-0 top-0 min-w-[200px] z-40 flex items-center md:overflow-hidden ">
-                    <Image width="100%" maxHeight={"none"} src={img_source}></Image>
+                    <Img width={img_source.width} height={img_source.height} maxHeight={"none"} alt={img_source.alt} src={img_source.src}></Img>
                 </div>
             </div>
         </div>

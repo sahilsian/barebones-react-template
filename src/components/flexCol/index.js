@@ -10,14 +10,14 @@ const FlexCol = ({ arr, pagination = [0, 3], variant = "default", hasDescription
           case "hover":
             //  goes into the hover effect image based display
             return (
-              <div className="flex-1">
-                <HoverImageText source={item.image} title={item.mame} description={item.description} alt={item.alt} />
+              <div  key={item.name} className="flex-1">
+                <HoverImageText  source={item.image} title={item.name} description={item.description} alt={item.alt} />
               </div>
             );
           default:
             return (
-              <div className="flex-1">
-               <ImageText noText={noText} hasDescription={hasDescription} source={item.source} title={item.title} description={item.description} alt={item.alt} shadow></ImageText>
+              <div key={item.title} className="flex-1">
+               <ImageText  noText={noText} hasDescription={hasDescription} source={item.source} title={item.title} description={item.description} alt={item.alt} shadow></ImageText>
               </div>
             );
         }

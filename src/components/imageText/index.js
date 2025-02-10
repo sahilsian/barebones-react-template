@@ -1,5 +1,5 @@
 import Hyperlink from "../hyperlink"
-import Image from "../image"
+import Img from "../image"
 import Spacer from "../spacer"
 import Text from "../text"
 
@@ -7,7 +7,7 @@ const ImageText = ({source="https://placehold.co/600x400/png", hasDescription=tr
     return (
         <div className="min-w-[300px] w-full max-w-[400px]">
             <div className="rounded-lg">
-                <Image maxHeight={maxHeight} shadow={shadow} src={source} width="100%" height="100%"></Image>
+                <Img maxHeight={maxHeight} shadow={shadow} src={source} width={source.width} height={source.height} alt={source.alt}></Img>
             </div>
             {!noText &&
             <div>

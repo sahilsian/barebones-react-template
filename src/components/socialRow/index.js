@@ -5,7 +5,7 @@ const SocialRow = ({}) => {
         <div className="flex items-center gap-2">
             {Socials.map((social) => {
                 return (
-                    <a href={social.name}>
+                    <a key={social.name} href={social.name}>
                         {social.icon}
                     </a>
                 )
