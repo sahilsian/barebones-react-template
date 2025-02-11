@@ -5,12 +5,15 @@ import { themes } from './constants/recnroll';
 export const Context = React.createContext({
     user: null,
     loading: false,
+    language: "",
+    setLanguage: () => {},
     theme: themes[0],
     setTheme: () => {}
 });
 
 const ContextProvider = ({ children }) => {
     const [user, setUser] = useState(null);
+    const [language, setLanguage] = useState("EN");
     const [theme, setTheme] = useState(themes[0])
     const [loading, setLoading] = useState(true)
 
@@ -20,7 +23,9 @@ const ContextProvider = ({ children }) => {
             user,
             loading,
             theme,
-            setTheme
+            setTheme,
+            language,
+            setLanguage
         }}>
             {children}
           
