@@ -45,9 +45,9 @@ const Navigation = ({ tabs, cta_label = "Our Activities", cta_route_to = "/", al
                         </div>
                         <div className=" md:block hidden justify-center items-center text-white  ">
                             <div className="flex gap-3  ">
-                                <span onClick={()=> {setLanguage("EN")}} className="cursor-pointer" style={language == "EN" ? {color: "rgb(255, 242, 0)"} : {}}>EN</span>
+                                <span onClick={() => { setLanguage("EN") }} className="cursor-pointer" style={language == "EN" ? { color: "rgb(255, 242, 0)" } : {}}>EN</span>
                                 /
-                                <span onClick={()=> {setLanguage("FR")}} className="cursor-pointer" style={language == "FR" ? {color: "rgb(255, 242, 0)"} : {}}>FR</span>
+                                <span onClick={() => { setLanguage("FR") }} className="cursor-pointer" style={language == "FR" ? { color: "rgb(255, 242, 0)" } : {}}>FR</span>
                             </div>
                         </div>
                     </div>
@@ -62,6 +62,13 @@ const Navigation = ({ tabs, cta_label = "Our Activities", cta_route_to = "/", al
                         </div>
                     </div>
                 </div>
+                <div className="  mt-2 md:hidden flex justify-end  text-white  ">
+                    <div className="flex gap-3  ">
+                        <span onClick={() => { setLanguage("EN") }} className="cursor-pointer" style={language == "EN" ? { color: "rgb(255, 242, 0)" } : {}}>EN</span>
+                        /
+                        <span onClick={() => { setLanguage("FR") }} className="cursor-pointer" style={language == "FR" ? { color: "rgb(255, 242, 0)" } : {}}>FR</span>
+                    </div>
+                </div>
                 <div className="md:hidden py-4">
                     {tabs.map((tab) => {
                         return (
@@ -71,7 +78,10 @@ const Navigation = ({ tabs, cta_label = "Our Activities", cta_route_to = "/", al
                         )
                     })}
                 </div>
+
             </div>
+
+
 
         </div>
     )
