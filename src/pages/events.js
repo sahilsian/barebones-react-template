@@ -1,19 +1,19 @@
-import Spacer from "../src/components/spacer";
-import Hero from "../src/components/hero";
-import ComponentHeader from "../src/components/componentHeader";
-import FlexCol from "../src/components/flexCol";
-import Center from "../src/components/center";
-import { Activities, Activities_Feature, Activities_Informational, Image_Text_Full_Row, Image_Text_Full_Row_Reverse, tabs, Navigation_Config, Hero_Config, Highlight_Config, Image_Text_Full_Location, Image_Text_Full_Activities, Featured_Activities, Featured_Faq, Faq_Items, Ongoing_Events, Feb_8_Events, Feb_13_Events, Feb_14_Events, Feb_15_Events, Feb_16_Events, Feb_17_Events } from "../src/utils/constants/recnroll";
-import ImageTextFull from "../src/components/imageTextFull";
-import Testimonials from "../src/components/testimonials/testimonials";
-import Navigation from "../src/components/navigation";
-import FAQ from "../src/components/faq";
-import BlueBanner from "../src/components/blueBanner";
-import EventItem from "../src/components/eventItem";
-import Text from "../src/components/text";
+import Spacer from "../components/spacer";
+import Hero from "../components/hero";
+import ComponentHeader from "../components/componentHeader";
+import FlexCol from "../components/flexCol";
+import Center from "../components/center";
+import { Activities, Activities_Feature, Activities_Informational, Image_Text_Full_Row, Image_Text_Full_Row_Reverse, tabs, Navigation_Config, Hero_Config, Highlight_Config, Image_Text_Full_Location, Image_Text_Full_Activities, Featured_Activities, Featured_Faq, Faq_Items, Ongoing_Events, Feb_8_Events, Feb_13_Events, Feb_14_Events, Feb_15_Events, Feb_16_Events, Feb_17_Events } from "../utils/constants/recnroll";
+import ImageTextFull from "../components/imageTextFull";
+import Testimonials from "../components/testimonials/testimonials";
+import Navigation from "../components/navigation";
+import FAQ from "../components/faq";
+import BlueBanner from "../components/blueBanner";
+import EventItem from "../components/eventItem";
+import Text from "../components/text";
 import { useState } from "react";
-import Snowman from "../src/components/snowman";
-import Footer from "../src/components/footer/footer";
+import Snowman from "../components/snowman";
+import Footer from "../components/footer/footer";
 import Head from "next/head";
 import { useRouter } from "next/router";
 
@@ -60,45 +60,30 @@ export default function Events() {
   return (
     <div>
       <Head>
-                <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
-                <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
-                <link rel="shortcut icon" href="/favicon/favicon.ico" />
-                <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
-                <link rel="manifest" href="/favicon/site.webmanifest" />
-                    <title>Event Schedule | Campbellton Sno-Fest</title>
-                    <meta name='description' content="Campbelltons New Brunswick annual Snow Fest is the most anticipated winter celebration with activities, music, food and fun."></meta>
-                    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"></meta>
-                    <link
-                    rel="stylesheet"
-                    type="text/css"
-                    charset="UTF-8"
-                    href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
-                    />
-                    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-
-                        awesome.min.css" rel="stylesheet" integrity="sha384-
-                        wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
-                    crossorigin="anonymous"></link>
-                    <link
-                    rel="stylesheet"
-                    type="text/css"
-                    href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
-                    />
-                    <meta property="og:url" content={`${router.asPath}`}></meta>
-                    <meta property="og:type" content="website"></meta>
-                    <meta property="og:title" content={"Events"}></meta>
-                    <meta content="Sno-Fest" property="og:site_name"></meta>
-                    <meta property="og:description" content={"Campbelltons New Brunswick annual Snow Fest is the most anticipated winter celebration with activities, music, food and fun."}
-                    ></meta>
-                    <meta name="theme-color" content="#23568D"></meta>
-                    <meta property="og:image" content={"/images/opengraph-default.png"}></meta>
-                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                    <meta name="twitter:card" content="summary_large_image"></meta>
-                    <meta property="twitter:domain" content="snofest.ca"></meta>
-                    <meta property="twitter:url" content={`${router.asPath}`}></meta>
-                    <meta name="twitter:title" content="Campbelltons New Brunswick annual Snow Fest is the most anticipated winter celebration with activities, music, food and fun."></meta>
-                    <meta name="twitter:description" content={"Campbelltons New Brunswick annual Snow Fest is the most anticipated winter celebration with activities, music, food and fun."}></meta>
-                    <meta name="twitter:image" content={"/images/opengraph-default.png"}></meta>
-                </Head>
+        <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+        <link rel="shortcut icon" href="/favicon/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+        <link rel="manifest" href="/favicon/site.webmanifest" />
+        <title>Event Schedule | Campbellton Sno-Fest</title>
+        <meta name='description' content="Campbelltons New Brunswick annual Snow Fest is the most anticipated winter celebration with activities, music, food and fun."></meta>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"></meta>
+        <meta property="og:url" content={`${router.asPath}`}></meta>
+        <meta property="og:type" content="website"></meta>
+        <meta property="og:title" content={"Events"}></meta>
+        <meta content="Sno-Fest" property="og:site_name"></meta>
+        <meta property="og:description" content={"Campbelltons New Brunswick annual Snow Fest is the most anticipated winter celebration with activities, music, food and fun."}
+        ></meta>
+        <meta name="theme-color" content="#23568D"></meta>
+        <meta property="og:image" content={"/images/opengraph-default.png"}></meta>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <meta name="twitter:card" content="summary_large_image"></meta>
+        <meta property="twitter:domain" content="snofest.ca"></meta>
+        <meta property="twitter:url" content={`${router.asPath}`}></meta>
+        <meta name="twitter:title" content="Campbelltons New Brunswick annual Snow Fest is the most anticipated winter celebration with activities, music, food and fun."></meta>
+        <meta name="twitter:description" content={"Campbelltons New Brunswick annual Snow Fest is the most anticipated winter celebration with activities, music, food and fun."}></meta>
+        <meta name="twitter:image" content={"/images/opengraph-default.png"}></meta>
+      </Head>
       <Navigation
         tabs={tabs}
         alert_headline={Navigation_Config.alert_headline}
@@ -107,7 +92,7 @@ export default function Events() {
         navigation_subheading={Navigation_Config.navigation_subheading}
         cta_label={Navigation_Config.cta_label}
         cta_route_to={Navigation_Config.cta_route_to}
-        >
+      >
       </Navigation>
 
 

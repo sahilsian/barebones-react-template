@@ -1,41 +1,11 @@
 import { FaFacebook, FaInstagram, FaTiktok, FaYoutube } from "react-icons/fa";
-import Home from "../../../pages/index";
+import Home from "../../pages/index";
 import Birthday from "../../../public/images/birthday.jpg"
 import Golf from "../../../public/images/golf.jpg"
 import Bowling_Full from "../../../public/images/bowling_full.jpg"
 import Fish from "../../../public/images/fish.jpg"
 import Sno_Fest_Logo from "../../../public/images/sno_fest_logo.png"
 import Sno_Fest_Hero from "../../../public/images/sno_fest_hero.jpg"
-
-export const config = {
-  navigation: {
-    id: "navigation",
-    props: {},
-    blocks: [
-      {
-        alert_statement: {
-          id: "",
-          props: {},
-          blocks: [
-
-          ]
-        }
-      },
-      {
-        navigation_header: {
-          id: "",
-          props: {},
-          blocks: [
-
-          ]
-        }
-      },
-      {
-
-      }
-    ]
-  }
-}
 
 export const tabs = [
   {
@@ -85,6 +55,22 @@ export const Navigation_Config = {
   }
 }
 
+export const Navigation_Config_FR = {
+  alert_headline: "Pour plus d'informations, appelez-nous au :",
+  alert_hyperlink_text: "+1 888-413-4433",
+  navigation_heading: "Campbellton Snofest",
+  navigation_subheading: "Campbellton, NB",
+  cta_label: "Voir notre programme d'événements",
+  cta_route_to: "/events",
+  navigation_logo: {
+    src: Sno_Fest_Logo,
+    width: 75,
+    height: 75,
+    alt: "Logo de SnoFest"
+  }
+}
+
+
 export const Hero_Config = {
   hero_heading: "Enjoy the Winter Magic",
   hero_subheading: "Come join us February 13th - 17th for the annual Campbellton Snofest.",
@@ -100,6 +86,23 @@ export const Hero_Config = {
   secondary_button_text: "Sponsors",
   secondary_button_href: "/sponsors"
 }
+
+export const Hero_Config_FR = {
+  hero_heading: "Profitez de la magie de l'hiver",
+  hero_subheading: "Rejoignez-nous du 13 au 17 février pour le Campbellton Snofest annuel.",
+  hero_img: {
+    src: "https://i.imgur.com/08wAnpN.jpeg",
+    width: 3000,
+    height: 2250,
+    alt: "Image principale du site Snofest montrant des skieurs au sommet d'une montagne"
+  },
+  hero_vid: null,
+  primary_button_text: "Voir notre programme d'événements",
+  primary_button_href: "/events",
+  secondary_button_text: "Sponsors",
+  secondary_button_href: "/sponsors"
+}
+
 
 
 
@@ -160,6 +163,64 @@ export const Highlight_Config = {
   ]
 }
 
+export const Highlight_Config_FR = {
+  highlight_heading: "Divertissement annuel",
+  highlight_subheading: "13 - 17 février",
+  highlight_arr: [
+    {
+      title: "Équipe Snofest",
+      description: "",
+      source: {
+        src: "https://i.imgur.com/08wAnpN.jpeg",
+        width: 3000,
+        height: 2250,
+        alt: "Image principale du site Snofest montrant des skieurs au sommet d'une montagne"
+      }
+    },
+    {
+      title: "Village Snofest",
+      description: "",
+      source: {
+        src: "https://i.imgur.com/KYzesVf.jpeg",
+        width: 1536,
+        height: 1534,
+        alt: "Image de la mascotte bonhomme de neige de Snofest"
+      }
+    },
+    {
+      title: "Activité Snofest",
+      description: "",
+      source: {
+        src: "https://i.imgur.com/GbBi3Yn.jpeg",
+        width: 4000,
+        height: 3000,
+        alt: "Image d’artisanat de bonhommes de neige"
+      }
+    },
+    {
+      title: "Bonhomme de neige éléphant",
+      description: "",
+      source: {
+        src: "https://i.imgur.com/sE6sz2l.jpeg",
+        width: 1504,
+        height: 1505,
+        alt: "Image d'un bonhomme de neige en forme d'éléphant"
+      }
+    },
+    {
+      title: "Bonhomme de neige Spongebob",
+      description: "",
+      source: {
+        src: "https://i.imgur.com/R6HvFex.jpeg",
+        width: 3000,
+        height: 2420,
+        alt: "Grand bonhomme de neige Spongebob"
+      }
+    }
+  ]
+}
+
+
 export const Image_Text_Full_Location = {
   descriptor: "LOTS OF FAMILY FUN",
   heading: "Campbellton's regional winter celebration",
@@ -174,6 +235,21 @@ export const Image_Text_Full_Location = {
   cta_link: "https://google.com"
 }
 
+export const Image_Text_Full_Location_FR = {
+  descriptor: "BEAUCOUP DE PLAISIR EN FAMILLE",
+  heading: "La célébration hivernale régionale de Campbellton",
+  subheading: "La célébration hivernale régionale de Campbellton propose une semaine entière de divertissements pour toute la famille. Profitez des spectacles au Village Sno-Fest au parc provincial Sugarloaf, admirez les sculptures de neige dispersées dans toute la ville, participez à des activités spéciales au musée, à la bibliothèque et à la galerie d'art, profitez des balades en traîneau, de la glissade sur tube, du patinage, des jeux, des concerts et bien plus encore. Ne manquez pas les événements de la Journée de la famille !",
+  image_source: {
+    src: "https://i.imgur.com/oXMRY6E.jpeg",
+    width: 4000,
+    height: 3000,
+    alt: "Village Sno-Fest"
+  },
+  cta_text: "En savoir plus sur nous",
+  cta_link: "https://google.com"
+}
+
+
 export const Image_Text_Full_Activities = {
   descriptor: "WINTER WONDERLAND ADVENTURES",
   heading: "Exciting Activities for All Ages",
@@ -185,6 +261,20 @@ export const Image_Text_Full_Activities = {
     alt: "Kids creating crafts in Sno Fest village"
   },
   cta_text: "Discover More Fun",
+  cta_link: "https://google.com"
+}
+
+export const Image_Text_Full_Activities_FR = {
+  descriptor: "AVENTURES DANS UN PAYS DES MERVEILLES HIVERNAL",
+  heading: "Des activités passionnantes pour tous les âges",
+  subheading: "Vivez une multitude d'activités hivernales excitantes lors de la célébration hivernale régionale de Campbellton ! Du tubing sur neige palpitant et du patinage sur glace aux balades en traîneau réconfortantes, il y en a pour tous les goûts. Visitez le Village Sno-Fest pour un plaisir en famille, explorez les sculptures de neige en ville et profitez de concerts, de jeux et bien plus encore. Ne manquez pas les événements spéciaux de la Journée de la famille !",
+  image_source: {
+    src: "https://i.imgur.com/J3XPizf.jpeg",
+    width: 3000,
+    height: 2625,
+    alt: "Enfants réalisant des bricolages dans le village Sno-Fest"
+  },
+  cta_text: "Découvrez encore plus de plaisir",
   cta_link: "https://google.com"
 }
 
@@ -228,6 +318,45 @@ export const Ongoing_Events = [
 
 ]
 
+export const Ongoing_Events_FR = [
+  {
+    title: "Sentier illuminé en soirée",
+    description: "Promenez-vous dans un sentier hivernal magnifiquement éclairé, où la neige scintille sous des lumières éclatantes, créant une ambiance hivernale inoubliable.",
+    date: "Tout au long du festival",
+    time: "Toute la journée",
+    location: "Camping du parc provincial Sugarloaf"
+  },
+  {
+    title: 'Exposition : "Hiver 2025" par les artistes membres locaux',
+    description: "Découvrez une magnifique collection d'œuvres inspirées de l'hiver, réalisées par des artistes membres locaux talentueux. Célébrez la beauté de la saison à travers la peinture, la photographie et des œuvres en techniques mixtes.",
+    date: "13 - 15 février",
+    time: "10h00 - 16h00",
+    location: "Galerie Restigouche"
+  },
+  {
+    title: "Boutique : Arts et produits",
+    description: "Soutenez les artistes et artisans locaux en explorant une sélection unique d'objets artisanaux, de peintures, de bijoux et de souvenirs sur le thème de l'hiver.",
+    date: "13 - 15 février",
+    time: "10h00 - 16h00",
+    location: "Galerie Restigouche"
+  },
+  {
+    title: "Plongez dans un monde de lecture avec une touche glacée",
+    description: "Empruntez un livre et recevez un coupon pour un Blizzard gratuit chez Dairy Queen ! Offre valable une fois par personne, jusqu'à épuisement des stocks.",
+    date: "13 - 15 février",
+    time: "10h00 - 16h00",
+    location: "Bibliothèque publique Raymond Lagacé"
+  },
+  {
+    title: "Remplissez un bulletin de participation",
+    description: "Remplissez un bulletin à la station de mini-golf du Village Sno-Fest pour courir la chance de gagner un panier d'activités.",
+    date: "Tout au long du festival",
+    time: "Toute la journée",
+    location: "Camping du parc provincial Sugarloaf"
+  }
+]
+
+
 export const Feb_8_Events = [
   {
     title: "Creation of Valentine's Day Cards",
@@ -251,6 +380,31 @@ export const Feb_8_Events = [
     location: "Alma Hall"
   }
 ];
+
+export const Feb_8_Events_FR = [
+  {
+    title: "Création de cartes de Saint-Valentin",
+    description: "Arrêtez-vous à la bibliothèque du centenaire de Campbellton pour créer des cartes de Saint-Valentin qui seront livrées aux aînés de la communauté. Tout le matériel est fourni. Tous les âges sont les bienvenus.",
+    date: "8 février",
+    time: "10h00 - 17h00",
+    location: "Bibliothèque du centenaire de Campbellton"
+  },
+  {
+    title: "Sculptures sur glace",
+    description: "Regardez des sculpteurs talentueux transformer des blocs de glace en œuvres d'art impressionnantes au parc provincial Sugarloaf.",
+    date: "8 février",
+    time: "14h00",
+    location: "Parc provincial Sugarloaf"
+  },
+  {
+    title: "Hommage à Mötley Crüe",
+    description: "Vibrez au son d'une performance électrisante en hommage à Mötley Crüe ! Les billets sont à 25 $ (+TVH & frais) et disponibles chez Hard Luck Woman Records et Ticketpro.",
+    date: "8 février",
+    time: "19h30",
+    location: "Alma Hall"
+  }
+];
+
 
 export const Feb_13_Events = [
   {
@@ -287,6 +441,44 @@ export const Feb_13_Events = [
     date: "February 13",
     time: "7:30 PM",
     location: "Restigouche Snowmobile Club"
+  }
+];
+
+export const Feb_13_Events_FR = [
+  {
+    title: "Visites guidées du musée Athol House",
+    description: "Découvrez l'histoire de notre comté et de ses trois cultures fondatrices : Mi'kmaq, Acadienne et Écossaise.",
+    date: "13 février",
+    time: "11h00 - 16h00",
+    location: "Galerie Restigouche"
+  },
+  {
+    title: "Club Zentangle",
+    description: "Rejoignez la bibliothèque du centenaire de Campbellton pour vous détendre et créer quelque chose de beau. Ouvert aux 5 ans et plus.",
+    date: "13 février",
+    time: "18h00",
+    location: "Bibliothèque du centenaire de Campbellton"
+  },
+  {
+    title: "Hommage à l'ancienne mascotte du Carnaval d'Atholville",
+    description: "Un événement spécial organisé par le Conseil municipal de Campbellton.",
+    date: "13 février",
+    time: "18h00",
+    location: "Alma Hall"
+  },
+  {
+    title: "Vie nocturne du Sno-Fest",
+    description: "Profitez de spectacles de musique en direct par des artistes locaux dans divers bars de la région.",
+    date: "13 février",
+    time: "Soirée",
+    location: "Divers bars locaux"
+  },
+  {
+    title: "Musique en direct : Danny Maltais",
+    description: "Appréciez une performance de Danny Maltais dans le cadre de l'événement Vie nocturne du Sno-Fest.",
+    date: "13 février",
+    time: "19h30",
+    location: "Club de motoneige Restigouche"
   }
 ];
 
@@ -348,6 +540,66 @@ export const Feb_14_Events = [
     location: "Restigouche Snowmobile Club"
   }
 ];
+
+export const Feb_14_Events_FR = [
+  {
+    title: "Visites guidées du musée Athol House",
+    description: "Découvrez l'histoire de notre comté et de ses trois cultures fondatrices : Mi'kmaq, Acadienne et Écossaise.",
+    date: "14 février",
+    time: "13h00 - 16h00",
+    location: "Galerie Restigouche"
+  },
+  {
+    title: "Bingo de la Saint-Valentin",
+    description: "Rejoignez la bibliothèque du centenaire de Campbellton pour une session amusante de bingo de la Saint-Valentin. Les places sont limitées, inscription requise au 506-753-5253.",
+    date: "14 février",
+    time: "15h45 - 16h45",
+    location: "Bibliothèque du centenaire de Campbellton"
+  },
+  {
+    title: "Village du Sno-Fest",
+    description: "Profitez de diverses activités hivernales, notamment un feu de camp, du chocolat chaud et des jeux amusants comme le mini-golf, le bowling, le tic-tac-toe et des promenades en traîneau à cheval.",
+    date: "14 février",
+    time: "16h00 - 20h00",
+    location: "Parc provincial Sugarloaf"
+  },
+  {
+    title: "Grande ouverture du Village du Sno-Fest",
+    description: "Ouverture officielle avec gâteau, musique en direct du James Young Band et feux d'artifice (si la météo le permet).",
+    date: "14 février",
+    time: "18h00 - 20h00",
+    location: "Parc provincial Sugarloaf"
+  },
+  {
+    title: "Vie nocturne du Sno-Fest",
+    description: "Les bars locaux accueillent des performances en direct de musiciens talentueux.",
+    date: "14 février",
+    time: "Soirée",
+    location: "Divers bars locaux"
+  },
+  {
+    title: "Musique en direct : Danny Maltais",
+    description: "Danny Maltais se produit en direct dans le cadre de la Vie nocturne du Sno-Fest.",
+    date: "14 février",
+    time: "19h00",
+    location: "Brasserie 1026"
+  },
+  {
+    title: "Musique en direct : Daniel Poirier",
+    description: "Daniel Poirier se produit en direct dans le cadre de la Vie nocturne du Sno-Fest.",
+    date: "14 février",
+    time: "21h00",
+    location: "Légion"
+  },
+  {
+    title: "Musique en direct : Bolton Creek Band",
+    description: "Bolton Creek Band se produit en direct dans le cadre de la Vie nocturne du Sno-Fest.",
+    date: "14 février",
+    time: "21h00",
+    location: "Club de motoneige Restigouche"
+  }
+];
+
 
 export const Feb_15_Events = [
   {
@@ -458,6 +710,116 @@ export const Feb_15_Events = [
   }
 ];
 
+export const Feb_15_Events_FR = [
+  {
+    title: "Rencontrez nos artistes",
+    description: "Une excellente occasion de visiter et de discuter avec les artistes de la région qui peindront, sculpteront et créeront sur place !",
+    date: "15 février",
+    time: "10h00 - 16h00",
+    location: "Galerie Restigouche"
+  },
+  {
+    title: "Déjeuner Chili à la Légion",
+    description: "15 $ pour un bol de chili, une boisson et un dessert.",
+    date: "15 février",
+    time: "11h00 - 13h00",
+    location: "Branche 19 de la Légion royale canadienne",
+    information: "506-759-8025"
+  },
+  {
+    title: "Réchauffez-vous au Coin Cozy du Sno-Fest",
+    description: "Profitez de la peinture sur visage, des bricolages, d'un concours de coloriage, d'un magicien et d'un stand de la bibliothèque du centenaire de Campbellton.",
+    date: "15 février",
+    time: "12h00 - 18h00",
+    location: "Auberge du parc provincial Sugarloaf"
+  },
+  {
+    title: "Village du Sno-Fest",
+    description: "Une journée remplie de divertissement en direct, de jeux, d'un feu de camp, de chocolat chaud et de promenades en traîneau à cheval.",
+    date: "15 février",
+    time: "12h00 - 20h00",
+    location: "Parc provincial Sugarloaf"
+  },
+  {
+    title: "Musique en direct : Claude Roy",
+    description: "Performance en direct de Claude Roy dans le cadre du programme de divertissement du Village du Sno-Fest.",
+    date: "15 février",
+    time: "13h30 - 14h30",
+    location: "Parc provincial Sugarloaf"
+  },
+  {
+    title: "Musique en direct : Daniel Poirier",
+    description: "Performance en direct de Daniel Poirier dans le cadre du programme de divertissement du Village du Sno-Fest.",
+    date: "15 février",
+    time: "15h30 - 16h30",
+    location: "Parc provincial Sugarloaf"
+  },
+  {
+    title: "Soirée dansante avec DJ Tyler",
+    description: "Une soirée dansante amusante avec DJ Tyler.",
+    date: "15 février",
+    time: "18h00 - 19h30",
+    location: "Parc provincial Sugarloaf"
+  },
+  {
+    title: "Collecte de fonds avec hot-dogs pour le parc provincial Sugarloaf",
+    description: "Hot-dogs gratuits, limite de 2 par personne. Organisé par le Patrouille de ski canadienne.",
+    date: "15 février",
+    time: "13h00 - 15h00",
+    location: "À côté du poste de premiers secours"
+  },
+  {
+    title: "Musique avec les Country Golden Girls",
+    description: "Musique country en direct, gratuite et ouverte à tous.",
+    date: "15 février",
+    time: "13h00 - 15h00",
+    location: "Salle des pompiers de Tide Head"
+  },
+  {
+    title: "Voices of Resilience",
+    description: "Une soirée de gastronomie et de divertissement au profit du comité de prévention du suicide de Restigouche. Billets : 75 $.",
+    date: "15 février",
+    time: "17h30",
+    location: "Alma Hall"
+  },
+  {
+    title: "Patinage sur étang illuminé",
+    description: "Profitez d'une soirée de patinage sous les lumières.",
+    date: "15 février",
+    time: "18h00 - 20h00",
+    location: "Parc provincial Sugarloaf"
+  },
+  {
+    title: "Vie nocturne du Sno-Fest",
+    description: "Performances en direct dans divers bars locaux.",
+    date: "15 février",
+    time: "Soirée",
+    location: "Divers bars locaux"
+  },
+  {
+    title: "Musique en direct : Renelle & Tracy",
+    description: "Performance de Renelle & Tracy dans le cadre de la Vie nocturne du Sno-Fest.",
+    date: "15 février",
+    time: "20h00",
+    location: "Artisan Brewing Company"
+  },
+  {
+    title: "Musique en direct : Daniel Poirier",
+    description: "Performance en direct de Daniel Poirier dans le cadre de la Vie nocturne du Sno-Fest.",
+    date: "15 février",
+    time: "21h00",
+    location: "Légion"
+  },
+  {
+    title: "DJ Doozy",
+    description: "Dansez toute la nuit avec DJ Doozy.",
+    date: "15 février",
+    time: "22h00",
+    location: "Dooly's"
+  }
+];
+
+
 export const Feb_16_Events = [
   {
     title: "Warm up at the Sno-Fest Cozy Corner",
@@ -510,6 +872,58 @@ export const Feb_16_Events = [
   }
 ];
 
+export const Feb_16_Events_FR = [
+  {
+    title: "Réchauffez-vous au Coin Cozy du Sno-Fest",
+    description: "Profitez des bricolages, de la peinture sur visage, d'un magicien et d'une activité sur l'Arbre de l'Amour. Service de cantine disponible sur place ($).",
+    date: "16 février",
+    time: "12h00 - 17h00",
+    location: "Auberge du parc provincial Sugarloaf"
+  },
+  {
+    title: "Village du Sno-Fest",
+    description: "Divertissement local en direct, jeux, chocolat chaud, feu de camp et promenades en traîneau à cheval.",
+    date: "16 février",
+    time: "12h00 - 17h00",
+    location: "Parc provincial Sugarloaf"
+  },
+  {
+    title: "Musique en direct : Paul Landry",
+    description: "Profitez d'une performance en direct de Paul Landry dans le cadre du programme de divertissement du Village du Sno-Fest.",
+    date: "16 février",
+    time: "13h30 - 14h30",
+    location: "Parc provincial Sugarloaf"
+  },
+  {
+    title: "Musique en direct : Linda Bergeron",
+    description: "Profitez d'une performance en direct de Linda Bergeron dans le cadre du programme de divertissement du Village du Sno-Fest.",
+    date: "16 février",
+    time: "15h30 - 16h30",
+    location: "Parc provincial Sugarloaf"
+  },
+  {
+    title: "Collecte de fonds avec hot-dogs",
+    description: "Hot-dogs gratuits, limite de 2 par personne. Organisé par le Patrouille de ski canadienne.",
+    date: "16 février",
+    time: "13h00 - 15h00",
+    location: "À côté du poste de premiers secours"
+  },
+  {
+    title: "Session de Jam Acoustic Country & Bluegrass",
+    description: "Une session de jam animée organisée par le Festival Bluegrass de Campbellton.",
+    date: "16 février",
+    time: "14h00 - 16h00",
+    location: "Club de motoneige Restigouche"
+  },
+  {
+    title: "Danse Glow en famille",
+    description: "Une soirée dansante gratuite avec des lumières UV, un spectacle de magie, des bracelets lumineux et plus encore ! Portez des vêtements blancs ou néons.",
+    date: "16 février",
+    time: "18h00 - 21h00",
+    location: "Centre de la Vallée, Val D'Amours"
+  }
+];
+
 export const Feb_17_Events = [
   {
     title: "Richelieu Family Day",
@@ -552,6 +966,51 @@ export const Feb_17_Events = [
     date: "February 17",
     time: "3:00 PM - 4:00 PM",
     location: "Sugarloaf Provincial Park"
+  }
+];
+
+export const Feb_17_Events_FR = [
+  {
+    title: "Journée de la famille Richelieu",
+    description: "Profitez de jeux gonflables, de mascottes, d'activités, de collations et bien plus encore ! Organisé par le Club Richelieu de Campbellton.",
+    date: "17 février",
+    time: "10h00 - 12h00",
+    location: "École Le Galion des Appalaches"
+  },
+  {
+    title: "Journée de la famille au parc provincial Sugarloaf",
+    description: "Essayez le ski, le patinage, la raquette et plus encore ! Passes de ski/planche à neige gratuites toute la journée (inscription requise, location d'équipement non incluse).",
+    date: "17 février",
+    time: "12h00 - 16h00",
+    location: "Parc provincial Sugarloaf"
+  },
+  {
+    title: "Réchauffez-vous au Coin Cozy du Sno-Fest",
+    description: "Profitez des bricolages, de la peinture sur visage, d'un magicien et de l'activité de l'Arbre de l'Amour. Service de cantine disponible sur place ($).",
+    date: "17 février",
+    time: "12h00 - 16h00",
+    location: "Auberge du parc provincial Sugarloaf"
+  },
+  {
+    title: "Village du Sno-Fest",
+    description: "Divertissement local en direct, jeux, chocolat chaud, feu de camp et promenades en traîneau à cheval.",
+    date: "17 février",
+    time: "12h00 - 16h00",
+    location: "Parc provincial Sugarloaf"
+  },
+  {
+    title: "Musique en direct : Diane Ouellette",
+    description: "Profitez d'une performance en direct de Diane Ouellette dans le cadre du programme de divertissement du Village du Sno-Fest.",
+    date: "17 février",
+    time: "13h30 - 14h30",
+    location: "Parc provincial Sugarloaf"
+  },
+  {
+    title: "Musique en direct : Eva Malley",
+    description: "Profitez d'une performance en direct d'Eva Malley dans le cadre du programme de divertissement du Village du Sno-Fest.",
+    date: "17 février",
+    time: "15h00 - 16h00",
+    location: "Parc provincial Sugarloaf"
   }
 ];
 
@@ -618,10 +1077,79 @@ export const Activities_Informational = [
   }
 ]
 
+export const Activities_Informational_FR = [
+  {
+    title: "Village du Sno-Fest",
+    description: "Explorez le cœur du Sno-Fest au Village du Sno-Fest, où vous pourrez profiter des vendeurs locaux, de la nourriture et d'une atmosphère animée. C'est l'endroit idéal pour se retrouver en famille et entre amis, faire du shopping et vivre l'essence du festival.",
+    source: {
+      src: "https://i.imgur.com/yH4A5vR.jpeg",
+      width: 2625,
+      height: 3500,
+      alt: "Une femme souriante avec la mascotte du Sno-Fest au Village du Sno-Fest, un centre animé pour les festivaliers"
+    }
+  },
+  {
+    title: "Mini Golf",
+    description: "Testez vos compétences en putting avec notre parcours de mini golf amusant et convivial au Sno-Fest. Parfait pour tous les âges, cette activité offre un excellent moyen de se détendre et de profiter du festival en plein air.",
+    source: {
+      src: "https://i.imgur.com/DSUtfuq.jpeg",
+      width: 3375,
+      height: 4500,
+      alt: "Un groupe de personnes jouant au mini golf au Sno-Fest, participant à une partie amicale de mini-golf"
+    }
+  },
+  {
+    title: "Activités pour enfants",
+    description: "Le Sno-Fest offre une multitude d'activités pour divertir les enfants. Des animaux en ballons aux jeux interactifs, le festival propose un espace sûr et excitant où les enfants peuvent laisser libre cours à leur créativité.",
+    source: {
+      src: "https://i.imgur.com/4tyuMob.jpeg",
+      width: 2250,
+      height: 3000,
+      alt: "Un homme créant des animaux en ballons pour les enfants au Sno-Fest, avec des enfants profitant de diverses activités amusantes"
+    }
+  },
+  {
+    title: "Musique en direct",
+    description: "Le Sno-Fest propose des performances en direct de groupes et d'artistes locaux, offrant une bande sonore vibrante au festival. Que vous profitiez d'un après-midi tranquille ou que vous dansiez toute la nuit, la musique ajoute à l'ambiance festive.",
+    source: {
+      src: "https://i.imgur.com/UMEwADn.jpeg",
+      width: 2625,
+      height: 3500,
+      alt: "Scène de musique en direct au Village du Sno-Fest, avec un public appréciant un concert"
+    }
+  },
+  {
+    title: "Arts et Métiers",
+    description: "Soyez créatif à la station des Arts et Métiers, où les festivaliers de tous âges peuvent créer leurs propres souvenirs et œuvres d'art. De la peinture aux travaux manuels, il y en a pour tous les goûts et chacun peut repartir avec sa création.",
+    source: {
+      src: "https://i.imgur.com/8Z4RPvl.jpeg",
+      width: 2625,
+      height: 3500,
+      alt: "Des enfants créant leurs propres projets au Village du Sno-Fest, entourés de matériaux colorés"
+    }
+  },
+  {
+    title: "Ski",
+    description: "Partez à l'assaut des pentes au Sno-Fest ! Que vous soyez un skieur expérimenté ou un débutant, profitez des vues magnifiques sur les montagnes et de la neige fraîche en dévalant les pentes dans cette activité excitante du festival.",
+    source: {
+      src: "https://i.imgur.com/ZsoxEfL.jpeg",
+      width: 2625,
+      height: 3500,
+      alt: "La mascotte du Sno-Fest saluant sur une montagne de ski, avec des skieurs en arrière-plan profitant des pistes."
+    }
+  }
+];
+
 export const Featured_Activities = {
   title: "Celebrate Winter",
   subtitle: "At the Campbellton Sno-Fest, visitors can also enjoy live music, food vendors, and other entertainment throughout the festival. With its family-friendly atmosphere and activities, it's a must for anyone looking to embrace the cold and snowy weather in Restigouche."
 }
+
+export const Featured_Activities_FR = {
+  title: "Célébrer l'Hiver",
+  subtitle: "Au Campbellton Sno-Fest, les visiteurs peuvent également profiter de musique en direct, de vendeurs de nourriture et d'autres divertissements tout au long du festival. Avec son ambiance familiale et ses activités, c'est un incontournable pour ceux qui souhaitent profiter du froid et de la neige en Restigouche."
+};
+
 
 export const Faq_Items = [
   {
@@ -646,12 +1174,39 @@ export const Faq_Items = [
   }
 ]
 
+export const Faq_Items_FR = [
+  {
+    question: "Qu'est-ce que le Campbellton SnoFest ?",
+    answer: "Le Campbellton SnoFest est un festival hivernal annuel célébrant les sports d'hiver, les activités de plein air et la culture locale à Campbellton, au Nouveau-Brunswick."
+  },
+  {
+    question: "Quand a lieu le Campbellton SnoFest ?",
+    answer: "Le Campbellton SnoFest a généralement lieu en février chaque année. Les dates exactes peuvent varier, il est donc préférable de vérifier le site officiel ou les réseaux sociaux pour les mises à jour."
+  },
+  {
+    question: "Quelles activités sont disponibles lors du Campbellton SnoFest ?",
+    answer: "Les activités incluent la raquette, le ski, le patinage sur glace, le snowboard, la musique en direct, des événements familiaux, des vendeurs de nourriture, et bien plus encore !"
+  },
+  {
+    question: "Y a-t-il un frais d'entrée pour le Campbellton SnoFest ?",
+    answer: "De nombreuses activités du SnoFest sont gratuites, mais certains événements ou attractions peuvent avoir un petit frais. Consultez le programme du SnoFest pour plus de détails."
+  },
+  {
+    question: "Où puis-je trouver plus d'informations sur le Campbellton SnoFest ?",
+    answer: "Pour les dernières mises à jour, les horaires et les informations sur les événements, visitez le site officiel du Campbellton SnoFest ou suivez leurs canaux de médias sociaux."
+  }
+];
+
 
 export const Featured_Faq = {
   title: "Frequently Asked Questions",
   subtitle: "Have any questions? See our frequently asked questions or reach out to us!"
 }
 
+export const Featured_Faq_FR = {
+  title: "Questions fréquemment posées",
+  subtitle: "Vous avez des questions ? Consultez nos questions fréquemment posées ou contactez-nous !"
+}
 
 export const Socials = [
   {
