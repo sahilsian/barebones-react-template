@@ -7,11 +7,15 @@ import Spacer from "../components/spacer";
 import Text from "../components/text";
 import { Navigation_Config, tabs } from "../utils/constants/recnroll";
 import { useRouter } from "next/router";
+import { Context } from "../utils/context_provider";
+import { useContext } from "react";
 
 
 export default function Sponsors() {
 
     const router = useRouter()
+
+    const { language } = useContext(Context)
 
     return (
         <div>
@@ -50,11 +54,20 @@ export default function Sponsors() {
                 cta_route_to={Navigation_Config.cta_route_to}
             >
             </Navigation>
-            <BlueBannerMini
-                title="Our Sponsors"
-                description="Sno-Fest is made possible by the generous support of our incredible sponsors. Their contributions help bring this community event to life, allowing us to offer a memorable experience for all attendees. We are grateful for their commitment to making Sno-Fest a success and for their ongoing support of local events and initiatives."
-            >
-            </BlueBannerMini>
+            {!language || language == "EN" ?
+                <BlueBannerMini
+                    title="Our Sponsors"
+                    description="Sno-Fest is made possible by the generous support of our incredible sponsors. Their contributions help bring this community event to life, allowing us to offer a memorable experience for all attendees. We are grateful for their commitment to making Sno-Fest a success and for their ongoing support of local events and initiatives."
+                >
+                </BlueBannerMini>
+                :
+                <BlueBannerMini
+                    title="Nos Sponsors"
+                    description="Sno-Fest est rendu possible grâce au soutien généreux de nos incroyables sponsors. Leurs contributions permettent de donner vie à cet événement communautaire, nous aidant à offrir une expérience mémorable à tous les participants. Nous leur sommes reconnaissants pour leur engagement à faire de Sno-Fest un succès et pour leur soutien continu aux événements et initiatives locales."
+                >
+                </BlueBannerMini>
+
+            }
             <Spacer height="300px"></Spacer>
             <Center>
                 <Text level={2} text={"Coming Soon"}></Text>
