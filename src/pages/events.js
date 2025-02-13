@@ -3,7 +3,7 @@ import Hero from "../components/hero";
 import ComponentHeader from "../components/componentHeader";
 import FlexCol from "../components/flexCol";
 import Center from "../components/center";
-import { Activities, Activities_Feature, Activities_Informational, Image_Text_Full_Row, Image_Text_Full_Row_Reverse, tabs, Navigation_Config, Hero_Config, Highlight_Config, Image_Text_Full_Location, Image_Text_Full_Activities, Featured_Activities, Featured_Faq, Faq_Items, Ongoing_Events, Feb_8_Events, Feb_13_Events, Feb_14_Events, Feb_15_Events, Feb_16_Events, Feb_17_Events, Ongoing_Events_FR, Feb_8_Events_FR, Feb_13_Events_FR, Feb_14_Events_FR, Feb_15_Events_FR, Feb_17_Events_FR, Featured_Faq_FR, Faq_Items_FR } from "../utils/constants/recnroll";
+import { Activities, Activities_Feature, Activities_Informational, Image_Text_Full_Row, Image_Text_Full_Row_Reverse, tabs, Navigation_Config, Hero_Config, Highlight_Config, Image_Text_Full_Location, Image_Text_Full_Activities, Featured_Activities, Featured_Faq, Faq_Items, Ongoing_Events, Feb_8_Events, Feb_13_Events, Feb_14_Events, Feb_15_Events, Feb_16_Events, Feb_17_Events, Ongoing_Events_FR, Feb_8_Events_FR, Feb_13_Events_FR, Feb_14_Events_FR, Feb_15_Events_FR, Feb_17_Events_FR, Featured_Faq_FR, Faq_Items_FR, Feb_16_Events_FR, Navigation_Config_FR } from "../utils/constants/recnroll";
 import ImageTextFull from "../components/imageTextFull";
 import Testimonials from "../components/testimonials/testimonials";
 import Navigation from "../components/navigation";
@@ -87,34 +87,75 @@ export default function Events() {
         <meta name="twitter:description" content={"Campbelltons New Brunswick annual Snow Fest is the most anticipated winter celebration with activities, music, food and fun."}></meta>
         <meta name="twitter:image" content={"/images/opengraph-default.png"}></meta>
       </Head>
-      <Navigation
-        tabs={tabs}
-        alert_headline={Navigation_Config.alert_headline}
-        alert_hyperlink_text={Navigation_Config.alert_hyperlink_text}
-        navigation_heading={Navigation_Config.navigation_heading}
-        navigation_subheading={Navigation_Config.navigation_subheading}
-        cta_label={Navigation_Config.cta_label}
-        cta_route_to={Navigation_Config.cta_route_to}
-      >
-      </Navigation>
+      {!language || language == "EN" ?
+        <Navigation
+          tabs={tabs}
+          alert_headline={Navigation_Config.alert_headline}
+          alert_hyperlink_text={Navigation_Config.alert_hyperlink_text}
+          navigation_heading={Navigation_Config.navigation_heading}
+          navigation_subheading={Navigation_Config.navigation_subheading}
+          cta_label={Navigation_Config.cta_label}
+          cta_route_to={Navigation_Config.cta_route_to}
+        >
+        </Navigation>
+        :
+        <Navigation
+          tabs={tabs}
+          alert_headline={Navigation_Config_FR.alert_headline}
+          alert_hyperlink_text={Navigation_Config_FR.alert_hyperlink_text}
+          navigation_heading={Navigation_Config_FR.navigation_heading}
+          navigation_subheading={Navigation_Config_FR.navigation_subheading}
+          cta_label={Navigation_Config_FR.cta_label}
+          cta_route_to={Navigation_Config_FR.cta_route_to}
+        >
+        </Navigation>
+      }
 
       {!language || language == "EN" ?
-      <div className="">
-        {/* ONGOING EVENTS */}
-        <div className="bg-[#23568D] h-[100px]"></div>
+        <div className="">
+          {/* ONGOING EVENTS */}
+          <div className="bg-[#23568D] h-[100px]"></div>
 
-        <BlueBanner>
-          <div>
-            <Text level={3} text={"During the Festival"} color={"#FFFFFF"}></Text>
+          <BlueBanner>
+            <div>
+              <Text level={3} text={"During the Festival"} color={"#FFFFFF"}></Text>
+              <Spacer height="20px"></Spacer>
+
+              {Ongoing_Events.map((event, id) => (
+                <EventItem
+                  key={id}
+                  onToggle={() => handleToggleOngoing(id)}
+                  isActive={activeOngoingId === id}
+                  color={"#FFFFFF"}
+                  color_chevron={"#FFFFFF"}
+                  title={event.title}
+                  description={event.description}
+                  date={event.date}
+                  time={event.time}
+                  location={event.location}
+                />
+              ))}
+
+            </div>
+          </BlueBanner>
+
+          <Spacer height="100px"></Spacer>
+
+          {/* FEBRUARY 8 EVENTS */}
+          <Center>
+            <div className="flex gap-6">
+              <Text level={3} text={"February 8th"}></Text>
+              <Text level={"3-light"} text={"Saturday Pre-Event"} color={"#23568D"}></Text>
+            </div>
+            <div className="w-full border-b-[1px] border-[#00000020]"></div>
             <Spacer height="20px"></Spacer>
 
-            {Ongoing_Events.map((event, id) => (
+            {Feb_8_Events.map((event, id) => (
               <EventItem
                 key={id}
-                onToggle={() => handleToggleOngoing(id)}
-                isActive={activeOngoingId === id}
-                color={"#FFFFFF"}
-                color_chevron={"#FFFFFF"}
+                onToggle={() => handleToggleFeb8(id)}
+                isActive={activeFeb8Id === id}
+                color={"#000000"}
                 title={event.title}
                 description={event.description}
                 date={event.date}
@@ -123,172 +164,19 @@ export default function Events() {
               />
             ))}
 
-          </div>
-        </BlueBanner>
-
-        <Spacer height="100px"></Spacer>
-
-        {/* FEBRUARY 8 EVENTS */}
-        <Center>
-          <div className="flex gap-6">
-            <Text level={3} text={"February 8th"}></Text>
-            <Text level={"3-light"} text={"Saturday Pre-Event"} color={"#23568D"}></Text>
-          </div>
-          <div className="w-full border-b-[1px] border-[#00000020]"></div>
-          <Spacer height="20px"></Spacer>
-
-          {Feb_8_Events.map((event, id) => (
-            <EventItem
-              key={id}
-              onToggle={() => handleToggleFeb8(id)}
-              isActive={activeFeb8Id === id}
-              color={"#000000"}
-              title={event.title}
-              description={event.description}
-              date={event.date}
-              time={event.time}
-              location={event.location}
-            />
-          ))}
-
-          <div className="flex gap-6">
-            <Text level={3} text={"February 13th"}></Text>
-            <Text level={"3-light"} text={"Thursday"} color={"#23568D"}></Text>
-          </div>
-          <div className="w-full border-b-[1px] border-[#00000020]"></div>
-          <Spacer height="20px"></Spacer>
-
-          {Feb_13_Events.map((event, id) => (
-            <EventItem
-              key={id}
-              onToggle={() => handleToggleFeb13(id)}
-              isActive={activeFeb13Id === id}
-              color={"#000000"}
-              title={event.title}
-              description={event.description}
-              date={event.date}
-              time={event.time}
-              location={event.location}
-            />
-          ))}
-
-          <div className="flex gap-6">
-            <Text level={3} text={"February 14th"}></Text>
-            <Text level={"3-light"} text={"Friday"} color={"#23568D"}></Text>
-          </div>
-          <div className="w-full border-b-[1px] border-[#00000020]"></div>
-          <Spacer height="20px"></Spacer>
-
-          {Feb_14_Events.map((event, id) => (
-            <EventItem
-              key={id}
-              onToggle={() => handleToggleFeb14(id)}
-              isActive={activeFeb14Id === id}
-              color={"#000000"}
-              title={event.title}
-              description={event.description}
-              date={event.date}
-              time={event.time}
-              location={event.location}
-            />
-          ))}
-
-          <div className="flex gap-6">
-            <Text level={3} text={"February 15th"}></Text>
-            <Text level={"3-light"} text={"Saturday"} color={"#23568D"}></Text>
-          </div>
-          <div className="w-full border-b-[1px] border-[#00000020]"></div>
-          <Spacer height="20px"></Spacer>
-
-          {Feb_15_Events.map((event, id) => (
-            <EventItem
-              key={id}
-              onToggle={() => handleToggleFeb15(id)}
-              isActive={activeFeb15Id === id}
-              color={"#000000"}
-              title={event.title}
-              description={event.description}
-              date={event.date}
-              time={event.time}
-              location={event.location}
-            />
-          ))}
-
-          <div className="flex gap-6">
-            <Text level={3} text={"February 16th"}></Text>
-            <Text level={"3-light"} text={"Sunday"} color={"#23568D"}></Text>
-          </div>
-          <div className="w-full border-b-[1px] border-[#00000020]"></div>
-          <Spacer height="20px"></Spacer>
-
-          {Feb_16_Events.map((event, id) => (
-            <EventItem
-              key={id}
-              onToggle={() => handleToggleFeb16(id)}
-              isActive={activeFeb16Id === id}
-              color={"#000000"}
-              title={event.title}
-              description={event.description}
-              date={event.date}
-              time={event.time}
-              location={event.location}
-            />
-          ))}
-
-          <div className="flex gap-6">
-            <Text level={3} text={"February 17th"}></Text>
-            <Text level={"3-light"} text={"Monday"} color={"#23568D"}></Text>
-          </div>
-          <div className="w-full border-b-[1px] border-[#00000020]"></div>
-          <Spacer height="20px"></Spacer>
-
-          {Feb_17_Events.map((event, id) => (
-            <EventItem
-              key={id}
-              onToggle={() => handleToggleFeb17(id)}
-              isActive={activeFeb17Id === id}
-              color={"#000000"}
-              title={event.title}
-              description={event.description}
-              date={event.date}
-              time={event.time}
-              location={event.location}
-            />
-          ))}
-
-          <Snowman></Snowman>
-
-          <div className="w-full max-w-[100px] border-b-[1px] border-[#FFFFFF20]"></div>
-          <Spacer height="100px"></Spacer>
-
-          {/* FAQ */}
-          <ComponentHeader
-            title={Featured_Faq.title}
-            subtitle={Featured_Faq.subtitle}
-          />
-          <Spacer height="20px"></Spacer>
-          <FAQ arr={Faq_Items} />
-        </Center>
-        <Spacer height="100px"></Spacer>
-        <Footer></Footer>
-      </div>
-      :
-      <div className="">
-        {/* ONGOING EVENTS */}
-        <div className="bg-[#23568D] h-[100px]"></div>
-
-        <BlueBanner>
-          <div>
-            <Text level={3} text={"During the Festival"} color={"#FFFFFF"}></Text>
+            <div className="flex gap-6">
+              <Text level={3} text={"February 13th"}></Text>
+              <Text level={"3-light"} text={"Thursday"} color={"#23568D"}></Text>
+            </div>
+            <div className="w-full border-b-[1px] border-[#00000020]"></div>
             <Spacer height="20px"></Spacer>
 
-            {Ongoing_Events_FR.map((event, id) => (
+            {Feb_13_Events.map((event, id) => (
               <EventItem
                 key={id}
-                onToggle={() => handleToggleOngoing(id)}
-                isActive={activeOngoingId === id}
-                color={"#FFFFFF"}
-                color_chevron={"#FFFFFF"}
+                onToggle={() => handleToggleFeb13(id)}
+                isActive={activeFeb13Id === id}
+                color={"#000000"}
                 title={event.title}
                 description={event.description}
                 date={event.date}
@@ -297,155 +185,285 @@ export default function Events() {
               />
             ))}
 
-          </div>
-        </BlueBanner>
+            <div className="flex gap-6">
+              <Text level={3} text={"February 14th"}></Text>
+              <Text level={"3-light"} text={"Friday"} color={"#23568D"}></Text>
+            </div>
+            <div className="w-full border-b-[1px] border-[#00000020]"></div>
+            <Spacer height="20px"></Spacer>
 
-        <Spacer height="100px"></Spacer>
+            {Feb_14_Events.map((event, id) => (
+              <EventItem
+                key={id}
+                onToggle={() => handleToggleFeb14(id)}
+                isActive={activeFeb14Id === id}
+                color={"#000000"}
+                title={event.title}
+                description={event.description}
+                date={event.date}
+                time={event.time}
+                location={event.location}
+              />
+            ))}
 
-        {/* FEBRUARY 8 EVENTS */}
-        <Center>
-          <div className="flex gap-6">
-            <Text level={3} text={"February 8th"}></Text>
-            <Text level={"3-light"} text={"Saturday Pre-Event"} color={"#23568D"}></Text>
-          </div>
-          <div className="w-full border-b-[1px] border-[#00000020]"></div>
-          <Spacer height="20px"></Spacer>
+            <div className="flex gap-6">
+              <Text level={3} text={"February 15th"}></Text>
+              <Text level={"3-light"} text={"Saturday"} color={"#23568D"}></Text>
+            </div>
+            <div className="w-full border-b-[1px] border-[#00000020]"></div>
+            <Spacer height="20px"></Spacer>
 
-          {Feb_8_Events_FR.map((event, id) => (
-            <EventItem
-              key={id}
-              onToggle={() => handleToggleFeb8(id)}
-              isActive={activeFeb8Id === id}
-              color={"#000000"}
-              title={event.title}
-              description={event.description}
-              date={event.date}
-              time={event.time}
-              location={event.location}
+            {Feb_15_Events.map((event, id) => (
+              <EventItem
+                key={id}
+                onToggle={() => handleToggleFeb15(id)}
+                isActive={activeFeb15Id === id}
+                color={"#000000"}
+                title={event.title}
+                description={event.description}
+                date={event.date}
+                time={event.time}
+                location={event.location}
+              />
+            ))}
+
+            <div className="flex gap-6">
+              <Text level={3} text={"February 16th"}></Text>
+              <Text level={"3-light"} text={"Sunday"} color={"#23568D"}></Text>
+            </div>
+            <div className="w-full border-b-[1px] border-[#00000020]"></div>
+            <Spacer height="20px"></Spacer>
+
+            {Feb_16_Events.map((event, id) => (
+              <EventItem
+                key={id}
+                onToggle={() => handleToggleFeb16(id)}
+                isActive={activeFeb16Id === id}
+                color={"#000000"}
+                title={event.title}
+                description={event.description}
+                date={event.date}
+                time={event.time}
+                location={event.location}
+              />
+            ))}
+
+            <div className="flex gap-6">
+              <Text level={3} text={"February 17th"}></Text>
+              <Text level={"3-light"} text={"Monday"} color={"#23568D"}></Text>
+            </div>
+            <div className="w-full border-b-[1px] border-[#00000020]"></div>
+            <Spacer height="20px"></Spacer>
+
+            {Feb_17_Events.map((event, id) => (
+              <EventItem
+                key={id}
+                onToggle={() => handleToggleFeb17(id)}
+                isActive={activeFeb17Id === id}
+                color={"#000000"}
+                title={event.title}
+                description={event.description}
+                date={event.date}
+                time={event.time}
+                location={event.location}
+              />
+            ))}
+
+            <Snowman></Snowman>
+
+            <div className="w-full max-w-[100px] border-b-[1px] border-[#FFFFFF20]"></div>
+            <Spacer height="100px"></Spacer>
+
+            {/* FAQ */}
+            <ComponentHeader
+              title={Featured_Faq.title}
+              subtitle={Featured_Faq.subtitle}
             />
-          ))}
+            <Spacer height="20px"></Spacer>
+            <FAQ arr={Faq_Items} />
+          </Center>
+          <Spacer height="100px"></Spacer>
+          <Footer></Footer>
+        </div>
+        :
+        <div className="">
+          {/* ONGOING EVENTS */}
+          <div className="bg-[#23568D] h-[100px]"></div>
 
-          <div className="flex gap-6">
-            <Text level={3} text={"February 13th"}></Text>
-            <Text level={"3-light"} text={"Thursday"} color={"#23568D"}></Text>
-          </div>
-          <div className="w-full border-b-[1px] border-[#00000020]"></div>
-          <Spacer height="20px"></Spacer>
+          <BlueBanner>
+            <div>
+              <Text level={3} text={"Pendant le Festival"} color={"#FFFFFF"}></Text>
+              <Spacer height="20px"></Spacer>
 
-          {Feb_13_Events_FR.map((event, id) => (
-            <EventItem
-              key={id}
-              onToggle={() => handleToggleFeb13(id)}
-              isActive={activeFeb13Id === id}
-              color={"#000000"}
-              title={event.title}
-              description={event.description}
-              date={event.date}
-              time={event.time}
-              location={event.location}
-            />
-          ))}
+              {Ongoing_Events_FR.map((event, id) => (
+                <EventItem
+                  key={id}
+                  onToggle={() => handleToggleOngoing(id)}
+                  isActive={activeOngoingId === id}
+                  color={"#FFFFFF"}
+                  color_chevron={"#FFFFFF"}
+                  title={event.title}
+                  description={event.description}
+                  date={event.date}
+                  time={event.time}
+                  location={event.location}
+                />
+              ))}
 
-          <div className="flex gap-6">
-            <Text level={3} text={"February 14th"}></Text>
-            <Text level={"3-light"} text={"Friday"} color={"#23568D"}></Text>
-          </div>
-          <div className="w-full border-b-[1px] border-[#00000020]"></div>
-          <Spacer height="20px"></Spacer>
+            </div>
+          </BlueBanner>
 
-          {Feb_14_Events_FR.map((event, id) => (
-            <EventItem
-              key={id}
-              onToggle={() => handleToggleFeb14(id)}
-              isActive={activeFeb14Id === id}
-              color={"#000000"}
-              title={event.title}
-              description={event.description}
-              date={event.date}
-              time={event.time}
-              location={event.location}
-            />
-          ))}
-
-          <div className="flex gap-6">
-            <Text level={3} text={"February 15th"}></Text>
-            <Text level={"3-light"} text={"Saturday"} color={"#23568D"}></Text>
-          </div>
-          <div className="w-full border-b-[1px] border-[#00000020]"></div>
-          <Spacer height="20px"></Spacer>
-
-          {Feb_15_Events_FR.map((event, id) => (
-            <EventItem
-              key={id}
-              onToggle={() => handleToggleFeb15(id)}
-              isActive={activeFeb15Id === id}
-              color={"#000000"}
-              title={event.title}
-              description={event.description}
-              date={event.date}
-              time={event.time}
-              location={event.location}
-            />
-          ))}
-
-          <div className="flex gap-6">
-            <Text level={3} text={"February 16th"}></Text>
-            <Text level={"3-light"} text={"Sunday"} color={"#23568D"}></Text>
-          </div>
-          <div className="w-full border-b-[1px] border-[#00000020]"></div>
-          <Spacer height="20px"></Spacer>
-
-          {Feb_16_Events.map((event, id) => (
-            <EventItem
-              key={id}
-              onToggle={() => handleToggleFeb16(id)}
-              isActive={activeFeb16Id === id}
-              color={"#000000"}
-              title={event.title}
-              description={event.description}
-              date={event.date}
-              time={event.time}
-              location={event.location}
-            />
-          ))}
-
-          <div className="flex gap-6">
-            <Text level={3} text={"February 17th"}></Text>
-            <Text level={"3-light"} text={"Monday"} color={"#23568D"}></Text>
-          </div>
-          <div className="w-full border-b-[1px] border-[#00000020]"></div>
-          <Spacer height="20px"></Spacer>
-
-          {Feb_17_Events_FR.map((event, id) => (
-            <EventItem
-              key={id}
-              onToggle={() => handleToggleFeb17(id)}
-              isActive={activeFeb17Id === id}
-              color={"#000000"}
-              title={event.title}
-              description={event.description}
-              date={event.date}
-              time={event.time}
-              location={event.location}
-            />
-          ))}
-
-          <Snowman></Snowman>
-
-          <div className="w-full max-w-[100px] border-b-[1px] border-[#FFFFFF20]"></div>
           <Spacer height="100px"></Spacer>
 
-          {/* FAQ */}
-          <ComponentHeader
-            title={Featured_Faq_FR.title}
-            subtitle={Featured_Faq_FR.subtitle}
-          />
-          <Spacer height="20px"></Spacer>
-          <FAQ arr={Faq_Items_FR} />
-        </Center>
-        <Spacer height="100px"></Spacer>
-        <Footer></Footer>
-      </div>
+          {/* FEBRUARY 8 EVENTS */}
+          <Center>
+            <div className="flex gap-6">
+              <Text level={3} text={"8 Février"}></Text>
+              <Text level={"3-light"} text={"Événement Préliminaire du Samedi"} color={"#23568D"}></Text>
+
+            </div>
+            <div className="w-full border-b-[1px] border-[#00000020]"></div>
+            <Spacer height="20px"></Spacer>
+
+            {Feb_8_Events_FR.map((event, id) => (
+              <EventItem
+                key={id}
+                onToggle={() => handleToggleFeb8(id)}
+                isActive={activeFeb8Id === id}
+                color={"#000000"}
+                title={event.title}
+                description={event.description}
+                date={event.date}
+                time={event.time}
+                location={event.location}
+              />
+            ))}
+
+            <div className="flex gap-6">
+              <Text level={3} text={"13 Février"}></Text>
+              <Text level={"3-light"} text={"Jeudi"} color={"#23568D"}></Text>
+            </div>
+
+            <div className="w-full border-b-[1px] border-[#00000020]"></div>
+            <Spacer height="20px"></Spacer>
+
+            {Feb_13_Events_FR.map((event, id) => (
+              <EventItem
+                key={id}
+                onToggle={() => handleToggleFeb13(id)}
+                isActive={activeFeb13Id === id}
+                color={"#000000"}
+                title={event.title}
+                description={event.description}
+                date={event.date}
+                time={event.time}
+                location={event.location}
+              />
+            ))}
+
+            <div className="flex gap-6">
+              <Text level={3} text={"14 Février"}></Text>
+              <Text level={"3-light"} text={"Vendredi"} color={"#23568D"}></Text>
+            </div>
+
+            <div className="w-full border-b-[1px] border-[#00000020]"></div>
+            <Spacer height="20px"></Spacer>
+
+            {Feb_14_Events_FR.map((event, id) => (
+              <EventItem
+                key={id}
+                onToggle={() => handleToggleFeb14(id)}
+                isActive={activeFeb14Id === id}
+                color={"#000000"}
+                title={event.title}
+                description={event.description}
+                date={event.date}
+                time={event.time}
+                location={event.location}
+              />
+            ))}
+
+            <div className="flex gap-6">
+              <Text level={3} text={"15 Février"}></Text>
+              <Text level={"3-light"} text={"Samedi"} color={"#23568D"}></Text>
+            </div>
+
+            <div className="w-full border-b-[1px] border-[#00000020]"></div>
+            <Spacer height="20px"></Spacer>
+
+            {Feb_15_Events_FR.map((event, id) => (
+              <EventItem
+                key={id}
+                onToggle={() => handleToggleFeb15(id)}
+                isActive={activeFeb15Id === id}
+                color={"#000000"}
+                title={event.title}
+                description={event.description}
+                date={event.date}
+                time={event.time}
+                location={event.location}
+              />
+            ))}
+
+            <div className="flex gap-6">
+              <Text level={3} text={"16 Février"}></Text>
+              <Text level={"3-light"} text={"Dimanche"} color={"#23568D"}></Text>
+            </div>
+
+            <div className="w-full border-b-[1px] border-[#00000020]"></div>
+            <Spacer height="20px"></Spacer>
+
+            {Feb_16_Events_FR.map((event, id) => (
+              <EventItem
+                key={id}
+                onToggle={() => handleToggleFeb16(id)}
+                isActive={activeFeb16Id === id}
+                color={"#000000"}
+                title={event.title}
+                description={event.description}
+                date={event.date}
+                time={event.time}
+                location={event.location}
+              />
+            ))}
+
+            <div className="flex gap-6">
+              <Text level={3} text={"17 Février"}></Text>
+              <Text level={"3-light"} text={"Lundi"} color={"#23568D"}></Text>
+            </div>
+
+            <div className="w-full border-b-[1px] border-[#00000020]"></div>
+            <Spacer height="20px"></Spacer>
+
+            {Feb_17_Events_FR.map((event, id) => (
+              <EventItem
+                key={id}
+                onToggle={() => handleToggleFeb17(id)}
+                isActive={activeFeb17Id === id}
+                color={"#000000"}
+                title={event.title}
+                description={event.description}
+                date={event.date}
+                time={event.time}
+                location={event.location}
+              />
+            ))}
+
+            <Snowman></Snowman>
+
+            <div className="w-full max-w-[100px] border-b-[1px] border-[#FFFFFF20]"></div>
+            <Spacer height="100px"></Spacer>
+            <ComponentHeader
+              title={Featured_Faq_FR.title}
+              subtitle={Featured_Faq_FR.subtitle}
+            />
+            <Spacer height="20px"></Spacer>
+
+            <FAQ arr={Faq_Items_FR} />
+          </Center>
+          <Spacer height="100px"></Spacer>
+          <Footer></Footer>
+        </div>
       }
     </div>
   );

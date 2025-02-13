@@ -20,8 +20,8 @@ const Navigation = ({ tabs, cta_label = "Our Activities", cta_route_to = "/", al
     }, [scrollPosition])
 
     return (
-        <div className={`fixed ${((scrollPosition > 100) || active) && "bg-[#20346f]"}  top-0 overflow-hidden flex flex-col w-full z-[100] pt-[40px] md:pt-[0px] px-7`}>
-            <div className="md:block hidden">
+        <div className={`fixed ${((scrollPosition > 100) || active) && "bg-[#20346f]"}  top-0 overflow-hidden flex flex-col w-full z-[100] pt-[20px] md:pt-[0px] px-7`}>
+            <div className="md:block ">
                 <AlertStatement headline={alert_headline} hyperlink_text={alert_hyperlink_text} theme={theme}></AlertStatement>
             </div>
             <div className={`md:p-5`}>
@@ -54,7 +54,7 @@ const Navigation = ({ tabs, cta_label = "Our Activities", cta_route_to = "/", al
 
 
 
-                    <div className="md:hidden mb-[6px] flex items-center">
+                    <div className="md:hidden flex items-center">
                         <div onClick={() => {
                             setActive(!active)
                         }} style={{ borderColor: "#FFFFFF" }} className="rounded-sm border-[1px]">
@@ -62,8 +62,8 @@ const Navigation = ({ tabs, cta_label = "Our Activities", cta_route_to = "/", al
                         </div>
                     </div>
                 </div>
-                <div className="  mt-2 md:hidden flex justify-end  text-white  ">
-                    <div className="flex gap-3  ">
+                <div className=" md:hidden flex justify-end  text-white  ">
+                    <div className="flex gap-2  ">
                         <span onClick={() => { setLanguage("EN") }} className="cursor-pointer" style={language == "EN" ? { color: "rgb(255, 242, 0)" } : {}}>EN</span>
                         /
                         <span onClick={() => { setLanguage("FR") }} className="cursor-pointer" style={language == "FR" ? { color: "rgb(255, 242, 0)" } : {}}>FR</span>
@@ -80,9 +80,6 @@ const Navigation = ({ tabs, cta_label = "Our Activities", cta_route_to = "/", al
                 </div>
 
             </div>
-
-
-
         </div>
     )
 }

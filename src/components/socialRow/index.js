@@ -1,3 +1,4 @@
+import Link from "next/link"
 import { Socials } from "../../utils/constants/recnroll"
 
 const SocialRow = ({}) => {
@@ -5,9 +6,9 @@ const SocialRow = ({}) => {
         <div className="flex items-center gap-2">
             {Socials.map((social) => {
                 return (
-                    <a key={social.name} href={social.name}>
+                    <Link target="_blank" key={social.name} href={social.name}>
                         {social.icon}
-                    </a>
+                    </Link>
                 )
             })}
         </div>
