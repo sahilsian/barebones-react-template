@@ -43,7 +43,7 @@ export const themes = [
 export const Navigation_Config = {
   alert_headline: "For more information, call us at:",
   alert_hyperlink_text: "+1 888-413-4433",
-  navigation_heading: "Campbellton Snofest",
+  navigation_heading: "Campbellton SnoFest",
   navigation_subheading: "Campbellton, NB",
   cta_label: "See our Event Schedule",
   cta_route_to: "/events",
@@ -56,29 +56,29 @@ export const Navigation_Config = {
 }
 
 export const Navigation_Config_FR = {
-  alert_headline: "Pour plus d'informations, appelez-nous au :",
+  alert_headline: "Appelez-nous au :",
   alert_hyperlink_text: "+1 888-413-4433",
-  navigation_heading: "Campbellton Snofest",
+  navigation_heading: "FestiNeige",
   navigation_subheading: "Campbellton, NB",
-  cta_label: "Voir notre programme d'événements",
+  cta_label: "Voir le programme",
   cta_route_to: "/events",
   navigation_logo: {
     src: Sno_Fest_Logo,
     width: 75,
     height: 75,
-    alt: "Logo de SnoFest"
+    alt: "Logo de FestiNeige"
   }
 }
 
 
 export const Hero_Config = {
   hero_heading: "Enjoy the Winter Magic",
-  hero_subheading: "Come join us February 13th - 17th for the annual Campbellton Snofest.",
+  hero_subheading: "Come join us February 13th - 17th for the annual Campbellton SnoFest.",
   hero_img: {
     src: "https://i.imgur.com/08wAnpN.jpeg",
     width: 3000,
     height: 2250,
-    alt: "Hero image for snofest website of skiers on top of mountain"
+    alt: "Hero image for SnoFest website of skiers on top of mountain"
   },
   hero_vid: null,
   primary_button_text: "See our Event Schedule",
@@ -89,15 +89,15 @@ export const Hero_Config = {
 
 export const Hero_Config_FR = {
   hero_heading: "Profitez de la magie de l'hiver",
-  hero_subheading: "Rejoignez-nous du 13 au 17 février pour le Campbellton Snofest annuel.",
+  hero_subheading: "Rejoignez-nous du 13 au 17 février pour le Campbellton FestiNeige annuel.",
   hero_img: {
     src: "https://i.imgur.com/08wAnpN.jpeg",
     width: 3000,
     height: 2250,
-    alt: "Image principale du site Snofest montrant des skieurs au sommet d'une montagne"
+    alt: "Image principale du site FestiNeige montrant des skieurs au sommet d'une montagne"
   },
   hero_vid: null,
-  primary_button_text: "Voir notre programme d'événements",
+  primary_button_text: "Voir le programme",
   primary_button_href: "/events",
   secondary_button_text: "Sponsors",
   secondary_button_href: "/sponsors"
@@ -111,27 +111,27 @@ export const Highlight_Config = {
   highlight_subheading: "February 13th - 17th",
   highlight_arr: [
     {
-      title: "Snofest Team",
+      title: "SnoFest Team",
       description: "",
       source: {
         src: "https://i.imgur.com/08wAnpN.jpeg",
         width: 3000,
         height: 2250,
-        alt: "Hero image for snofest website of skiers on top of mountain"
+        alt: "Hero image for SnoFest website of skiers on top of mountain"
       }
     },
     {
-      title: "Snofest Village",
+      title: "SnoFest Village",
       description: "",
       source: {
         src: "https://i.imgur.com/KYzesVf.jpeg",
         width: 1536,
         height: 1534,
-        alt: "Image of snofest snoman mascot"
+        alt: "Image of SnoFest snoman mascot"
       }
     },
     {
-      title: "Snofest Activity",
+      title: "SnoFest Activity",
       description: "",
       source: {
         src: "https://i.imgur.com/GbBi3Yn.jpeg",
@@ -168,27 +168,27 @@ export const Highlight_Config_FR = {
   highlight_subheading: "13 - 17 février",
   highlight_arr: [
     {
-      title: "Équipe Snofest",
+      title: "Équipe FestiNeige",
       description: "",
       source: {
         src: "https://i.imgur.com/08wAnpN.jpeg",
         width: 3000,
         height: 2250,
-        alt: "Image principale du site Snofest montrant des skieurs au sommet d'une montagne"
+        alt: "Image principale du site FestiNeige montrant des skieurs au sommet d'une montagne"
       }
     },
     {
-      title: "Village Snofest",
+      title: "Village FestiNeige",
       description: "",
       source: {
         src: "https://i.imgur.com/KYzesVf.jpeg",
         width: 1536,
         height: 1534,
-        alt: "Image de la mascotte bonhomme de neige de Snofest"
+        alt: "Image de la mascotte bonhomme de neige de FestiNeige"
       }
     },
     {
-      title: "Activité Snofest",
+      title: "Activité FestiNeige",
       description: "",
       source: {
         src: "https://i.imgur.com/GbBi3Yn.jpeg",
@@ -1016,13 +1016,13 @@ export const Feb_17_Events_FR = [
 
 export const Activities_Informational = [
   {
-    title: "Snofest Village",
-    description: "Explore the heart of Sno-Fest at the Snofest Village, where you can enjoy local vendors, food, and a fun-filled atmosphere. This is the perfect place to gather with friends and family, shop, and experience the essence of the festival.",
+    title: "SnoFest Village",
+    description: "Explore the heart of Sno-Fest at the SnoFest Village, where you can enjoy local vendors, food, and a fun-filled atmosphere. This is the perfect place to gather with friends and family, shop, and experience the essence of the festival.",
     source: {
       src: "https://i.imgur.com/yH4A5vR.jpeg",
       width: 2625,
       height: 3500,
-      alt: "A woman smiling while hanging with the Sno-Fest mascot at the Snofest Village, a lively hub for festival goers"
+      alt: "A woman smiling while hanging with the Sno-Fest mascot at the SnoFest Village, a lively hub for festival goers"
     }
   },
   {
@@ -1142,12 +1142,12 @@ export const Activities_Informational_FR = [
 
 export const Featured_Activities = {
   title: "Celebrate Winter",
-  subtitle: "At the Campbellton Sno-Fest, visitors can also enjoy live music, food vendors, and other entertainment throughout the festival. With its family-friendly atmosphere and activities, it's a must for anyone looking to embrace the cold and snowy weather in Restigouche."
+  subtitle: "At the Campbellton SnoFest, visitors can also enjoy live music, food vendors, and other entertainment throughout the festival. With its family-friendly atmosphere and activities, it's a must for anyone looking to embrace the cold and snowy weather in Restigouche."
 }
 
 export const Featured_Activities_FR = {
   title: "Célébrer l'Hiver",
-  subtitle: "Au Campbellton Sno-Fest, les visiteurs peuvent également profiter de musique en direct, de vendeurs de nourriture et d'autres divertissements tout au long du festival. Avec son ambiance familiale et ses activités, c'est un incontournable pour ceux qui souhaitent profiter du froid et de la neige en Restigouche."
+  subtitle: "Au Campbellton FestiNeige, les visiteurs peuvent également profiter de musique en direct, de vendeurs de nourriture et d'autres divertissements tout au long du festival. Avec son ambiance familiale et ses activités, c'est un incontournable pour ceux qui souhaitent profiter du froid et de la neige en Restigouche."
 };
 
 
@@ -1176,24 +1176,24 @@ export const Faq_Items = [
 
 export const Faq_Items_FR = [
   {
-    question: "Qu'est-ce que le Campbellton SnoFest ?",
-    answer: "Le Campbellton SnoFest est un festival hivernal annuel célébrant les sports d'hiver, les activités de plein air et la culture locale à Campbellton, au Nouveau-Brunswick."
+    question: "Qu'est-ce que le Campbellton FestiNeige ?",
+    answer: "Le Campbellton FestiNeige est un festival hivernal annuel célébrant les sports d'hiver, les activités de plein air et la culture locale à Campbellton, au Nouveau-Brunswick."
   },
   {
-    question: "Quand a lieu le Campbellton SnoFest ?",
-    answer: "Le Campbellton SnoFest a généralement lieu en février chaque année. Les dates exactes peuvent varier, il est donc préférable de vérifier le site officiel ou les réseaux sociaux pour les mises à jour."
+    question: "Quand a lieu le Campbellton FestiNeige ?",
+    answer: "Le Campbellton FestiNeige a généralement lieu en février chaque année. Les dates exactes peuvent varier, il est donc préférable de vérifier le site officiel ou les réseaux sociaux pour les mises à jour."
   },
   {
-    question: "Quelles activités sont disponibles lors du Campbellton SnoFest ?",
+    question: "Quelles activités sont disponibles lors du Campbellton FestiNeige ?",
     answer: "Les activités incluent la raquette, le ski, le patinage sur glace, le snowboard, la musique en direct, des événements familiaux, des vendeurs de nourriture, et bien plus encore !"
   },
   {
-    question: "Y a-t-il un frais d'entrée pour le Campbellton SnoFest ?",
-    answer: "De nombreuses activités du SnoFest sont gratuites, mais certains événements ou attractions peuvent avoir un petit frais. Consultez le programme du SnoFest pour plus de détails."
+    question: "Y a-t-il un frais d'entrée pour le Campbellton FestiNeige ?",
+    answer: "De nombreuses activités du FestiNeige sont gratuites, mais certains événements ou attractions peuvent avoir un petit frais. Consultez le programme du FestiNeige pour plus de détails."
   },
   {
-    question: "Où puis-je trouver plus d'informations sur le Campbellton SnoFest ?",
-    answer: "Pour les dernières mises à jour, les horaires et les informations sur les événements, visitez le site officiel du Campbellton SnoFest ou suivez leurs canaux de médias sociaux."
+    question: "Où puis-je trouver plus d'informations sur le Campbellton FestiNeige ?",
+    answer: "Pour les dernières mises à jour, les horaires et les informations sur les événements, visitez le site officiel du Campbellton FestiNeige ou suivez leurs canaux de médias sociaux."
   }
 ];
 
@@ -1208,21 +1208,18 @@ export const Featured_Faq_FR = {
   subtitle: "Vous avez des questions ? Consultez nos questions fréquemment posées ou contactez-nous !"
 }
 
+export const Sponsors_Image = {
+  source: "/images/IMG_5925.jpeg",
+  width: 1170,
+  height: 2532,
+  alt: "Banner that describes all sponsors"
+}
+
+
 export const Socials = [
+  
   {
-    name: "https://instagram.com/",
-    icon: <FaInstagram color={'#FFFFFF'} size={16}></FaInstagram>
-  },
-  {
-    name: "https://facebook.com/",
+    name: "https://www.facebook.com/snofestcampbelltonnb/",
     icon: <FaFacebook color={'#FFFFFF'} size={16}></FaFacebook>
-  },
-  {
-    name: "https://youtube.com/",
-    icon: <FaYoutube color={'#FFFFFF'} size={16}></FaYoutube>
-  },
-  {
-    name: "https://tiktok.com/",
-    icon: <FaTiktok color={'#FFFFFF'} size={16}></FaTiktok>
   }
 ]
