@@ -1209,7 +1209,7 @@ export const Featured_Faq_FR = {
 }
 
 export const Sponsors_Image = {
-  source: "/images/IMG_5925.jpeg",
+  source: "/images/IMG_5925.JPEG",
   width: 1170,
   height: 2532,
   alt: "Banner that describes all sponsors"
